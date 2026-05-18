@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── DAX Design System ─────────────────────────────────────── */
+
+:root {
+  /* Base surfaces */
+  --dax-bg:         #F3F0E8;
+  --dax-pearl:      #EDE9DF;
+  --dax-fog:        #E5E1D6;
+  --dax-silver:     #CEC9BE;
+
+  /* Text */
+  --dax-primary:    #1C1A16;
+  --dax-secondary:  #6A6760;
+  --dax-tertiary:   #9C9891;
+
+  /* Accent tones (restrained, cinematic) */
+  --dax-blue:       #83AECA;
+  --dax-violet:     #A698BF;
+  --dax-lavender:   #BFAFD8;
+
+  /* Glow values */
+  --glow-blue:      rgba(131, 174, 202, 0.22);
+  --glow-violet:    rgba(166, 152, 191, 0.18);
+  --glow-lavender:  rgba(191, 175, 216, 0.14);
+
+  /* Borders */
+  --dax-border:     rgba(150, 145, 138, 0.15);
+  --dax-border-2:   rgba(150, 145, 138, 0.08);
+}
+
+/* ─── Reset ─────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+}
+
+/* ─── Atmospheric Body ───────────────────────────────────────── */
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  color: var(--dax-primary);
+  overflow-x: hidden;
+  position: relative;
+
+  /* Layered atmospheric background — never flat white */
+  background-color: var(--dax-bg);
+  background-image:
+    /* Top-right icy blue bloom */
+    radial-gradient(ellipse 65% 50% at 88% 2%, rgba(131, 174, 202, 0.13) 0%, transparent 60%),
+    /* Left-center violet haze */
+    radial-gradient(ellipse 50% 45% at 5% 55%, rgba(166, 152, 191, 0.10) 0%, transparent 58%),
+    /* Bottom lavender diffusion */
+    radial-gradient(ellipse 75% 40% at 50% 100%, rgba(191, 175, 216, 0.09) 0%, transparent 60%),
+    /* Central subtle pearl shimmer */
+    radial-gradient(ellipse 45% 35% at 55% 30%, rgba(243, 240, 232, 0.6) 0%, transparent 65%);
+}
+
+/* ─── Film Grain Overlay ─────────────────────────────────────── */
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: -30%;
+  width: 160%;
+  height: 160%;
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 220px 220px;
+  animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10%       { transform: translate(-2%, -3%); }
+  20%       { transform: translate(2%, 2%); }
+  30%       { transform: translate(-1%, 1%); }
+  40%       { transform: translate(3%, -2%); }
+  50%       { transform: translate(-3%, 3%); }
+  60%       { transform: translate(1%, -2%); }
+  70%       { transform: translate(-2%, 4%); }
+  80%       { transform: translate(3%, 1%); }
+  90%       { transform: translate(-1%, -1%); }
+}
+
+/* ─── Typography Foundation ──────────────────────────────────── */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.0;
+  color: var(--dax-primary);
+}
+
+p, span, button, a {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* ─── Selection Styling ──────────────────────────────────────── */
+
+::selection {
+  background: rgba(131, 174, 202, 0.25);
+  color: var(--dax-primary);
+}
+
+/* ─── Placeholder styling ────────────────────────────────────── */
+
+::placeholder {
+  color: var(--dax-silver);
+  font-weight: 300;
+  font-family: var(--font-inter);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dax-fog);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dax-silver);
+  border-radius: 2px;
+}
+
+/* ─── Utilities ──────────────────────────────────────────────── */
+
+.atmospheric-surface {
+  background: rgba(237, 233, 223, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--dax-border);
+}
+
+.text-gradient-violet {
+  background: linear-gradient(135deg, var(--dax-violet) 0%, var(--dax-lavender) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dax-border), transparent);
+}

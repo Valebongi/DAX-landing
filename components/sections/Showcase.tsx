@@ -33,7 +33,7 @@ export function Showcase() {
                 fontSize: '12px',
                 letterSpacing: '0.16em',
                 textTransform: 'uppercase',
-                color: '#14A5E8',
+                color: '#3BAAD8',
                 margin: 0,
               }}
             >
@@ -85,7 +85,7 @@ export function Showcase() {
                       top: '10px',
                       width: '12px',
                       height: '2px',
-                      background: '#3ABEF9',
+                      background: '#5DC0E8',
                       display: 'block',
                     }}
                   />
@@ -130,7 +130,7 @@ export function Showcase() {
                   margin: 0,
                 }}
               >
-                3.4<span style={{ color: '#3ABEF9' }}>×</span>
+                3.4<span style={{ color: '#5DC0E8' }}>×</span>
               </p>
               <p
                 style={{

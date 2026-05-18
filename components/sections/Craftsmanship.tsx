@@ -44,7 +44,7 @@ export function Craftsmanship() {
               fontSize: '12px',
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: '#14A5E8',
+              color: '#3BAAD8',
               margin: 0,
             }}
           >
@@ -101,7 +101,7 @@ export function Craftsmanship() {
                   fontFamily: 'var(--font-mono)',
                   fontWeight: 600,
                   fontSize: '13px',
-                  color: '#14A5E8',
+                  color: '#3BAAD8',
                   letterSpacing: '0.04em',
                 }}
               >

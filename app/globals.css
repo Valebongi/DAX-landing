@@ -6,9 +6,9 @@
 
 :root {
   /* ── Core palette ── */
-  --dax-navy:           #061528;
-  --dax-navy-raised:    #0E2138;
-  --dax-slate:          #2E3D50;
+  --dax-navy:           #091D38;
+  --dax-navy-raised:    #0E2B50;
+  --dax-slate:          #2A5580;
   --dax-electric:       #39BEF9;
   --dax-electric-dark:  #1A9FD8;
 
@@ -19,7 +19,7 @@
   --dax-border-light:   #D8DEE6;
 
   /* ── Dark section tokens (default) ── */
-  --dax-bg:             #061528;
+  --dax-bg:             #091D38;
   --dax-primary:        #F7F9FC;
   --dax-secondary:      #8FA3B8;
   --dax-tertiary:       #4E6278;
@@ -92,10 +92,10 @@ body {
 
   background-color: var(--dax-navy);
   background-image:
-    radial-gradient(ellipse 70% 55% at 90% 5%,  rgba(57, 190, 249, 0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 45% at 5% 60%,  rgba(26, 159, 216, 0.07) 0%, transparent 58%),
-    radial-gradient(ellipse 65% 40% at 50% 100%, rgba(57, 190, 249, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 30% at 55% 35%,  rgba(14, 33, 56, 0.8) 0%, transparent 65%);
+    radial-gradient(ellipse 70% 55% at 90% 5%,  rgba(57, 190, 249, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 45% at 5% 60%,  rgba(57, 190, 249, 0.10) 0%, transparent 58%),
+    radial-gradient(ellipse 65% 40% at 50% 100%, rgba(87, 210, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 55% 35%,  rgba(9, 29, 56, 0.6) 0%, transparent 65%);
 }
 
 /* ─── Film Grain Overlay ─────────────────────────────────────── */

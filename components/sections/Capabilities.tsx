@@ -48,18 +48,16 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: 'rgba(255, 255, 255, 0.85)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
-        border: `1px solid ${hovered ? '#3ABEF9' : '#E6EAF0'}`,
+        background: '#FFFFFF',
+        border: `1px solid ${hovered ? '#5DB8E0' : '#E6EAF0'}`,
         borderRadius: 'var(--radius-lg)',
         padding: '24px',
         display: 'flex',
         flexDirection: 'column',
         gap: '16px',
         boxShadow: hovered
-          ? '0 6px 16px -4px rgba(7,21,41,0.08), 0 2px 6px rgba(7,21,41,0.04)'
-          : '0 1px 3px rgba(7,21,41,0.06), 0 1px 2px rgba(7,21,41,0.04)',
+          ? '4px 4px 0px #B8D4E4, 0 8px 20px -4px rgba(7,21,41,0.10)'
+          : '3px 3px 0px #D8E8F0',
         transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
         transition: 'all 200ms var(--ease-standard)',
         cursor: 'default',
@@ -74,7 +72,7 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
             borderRadius: 'var(--radius-md)',
             display: 'grid',
             placeItems: 'center',
-            color: '#14A5E8',
+            color: '#3BAAD8',
             flexShrink: 0,
           }}
         >
@@ -85,7 +83,7 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
             fontFamily: 'var(--font-mono)',
             fontSize: '11px',
             fontWeight: 500,
-            color: '#14A5E8',
+            color: '#3BAAD8',
             letterSpacing: '0.02em',
           }}
         >
@@ -129,7 +127,7 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
           fontFamily: 'var(--font-sans)',
           fontSize: '13px',
           fontWeight: 600,
-          color: hovered ? '#14A5E8' : '#071529',
+          color: hovered ? '#3BAAD8' : '#071529',
           transition: 'all var(--dur-base) var(--ease-standard)',
           textDecoration: 'none',
           marginTop: 'auto',
@@ -159,7 +157,7 @@ export function Capabilities() {
               fontSize: '12px',
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: '#14A5E8',
+              color: '#3BAAD8',
               margin: 0,
             }}
           >

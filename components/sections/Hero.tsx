@@ -7,8 +7,8 @@ import { GlowOrb, GlowOrbSlow } from '@/components/ui/GlowOrb'
 
 const EASE_CINEMA = [0.16, 1, 0.3, 1] as const
 
-// Low-angle misty building — shot from below, cinematic night/dusk
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1542603832406-b2bd67af3734?w=1600&q=85&auto=format&fit=crop'
+// Earth from orbit — civilization's tech network, global scale, growth + trust
+const HERO_IMAGE = 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=90&auto=format&fit=crop'
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -46,8 +46,8 @@ export function Hero() {
             sizes="70vw"
             className="object-cover object-center"
             style={{
-              filter: 'saturate(0.15) brightness(0.55) contrast(1.1)',
-              opacity: 0.65,
+              filter: 'saturate(0.80) brightness(0.92) contrast(1.08)',
+              opacity: 1,
             }}
           />
         </motion.div>
@@ -57,16 +57,16 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to right, var(--dax-navy) 28%, rgba(6,21,40,0.88) 42%, rgba(6,21,40,0.35) 65%, transparent 100%)',
+              'linear-gradient(to right, var(--dax-navy) 24%, rgba(9,29,56,0.90) 38%, rgba(9,29,56,0.38) 62%, transparent 100%)',
           }}
         />
 
-        {/* Top + bottom fade */}
+        {/* Top + bottom fade — bottom starts at 45% so no hard edge at section boundary */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, var(--dax-navy) 0%, transparent 18%, transparent 70%, var(--dax-navy) 100%)',
+              'linear-gradient(to bottom, var(--dax-navy) 0%, transparent 14%, transparent 42%, rgba(9,29,56,0.55) 62%, rgba(9,29,56,0.85) 78%, var(--dax-navy) 100%)',
           }}
         />
 
@@ -145,7 +145,7 @@ export function Hero() {
             style={{
               fontFamily: 'var(--font-outfit)',
               fontWeight: 700,
-              fontSize: 'clamp(3.2rem, 8.5vw, 10.5rem)',
+              fontSize: 'clamp(2rem, 5.2vw, 6.8rem)',
               letterSpacing: '-0.03em',
               color: 'var(--dax-primary)',
             }}
@@ -162,7 +162,7 @@ export function Hero() {
             style={{
               fontFamily: 'var(--font-outfit)',
               fontWeight: 300,
-              fontSize: 'clamp(3.2rem, 8.5vw, 10.5rem)',
+              fontSize: 'clamp(2rem, 5.2vw, 6.8rem)',
               letterSpacing: '-0.03em',
               color: 'var(--dax-secondary)',
             }}
@@ -179,7 +179,7 @@ export function Hero() {
             style={{
               fontFamily: 'var(--font-outfit)',
               fontWeight: 700,
-              fontSize: 'clamp(3.2rem, 8.5vw, 10.5rem)',
+              fontSize: 'clamp(2rem, 5.2vw, 6.8rem)',
               letterSpacing: '-0.03em',
               color: 'var(--dax-primary)',
             }}
@@ -206,11 +206,7 @@ export function Hero() {
               color: 'var(--dax-secondary)',
             }}
           >
-            A creative technology studio from Argentina.
-            <br />
-            We engineer cinematic digital experiences
-            <br />
-            where code meets emotion.
+            Buenos Aires. Code meets emotion.
           </motion.p>
 
           <motion.div

@@ -36,7 +36,7 @@ function IAStep({ step, index }: { step: (typeof steps)[0]; index: number }) {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: index * 0.12 }}
       whileHover={{
-        borderColor: '#3ABEF9',
+        borderColor: '#5DC0E8',
         boxShadow: '0 6px 16px -4px rgba(7,21,41,0.08), 0 2px 6px rgba(7,21,41,0.04)',
       }}
       style={{
@@ -60,7 +60,7 @@ function IAStep({ step, index }: { step: (typeof steps)[0]; index: number }) {
           fontFamily: 'var(--font-mono)',
           fontWeight: 600,
           fontSize: '22px',
-          color: '#3ABEF9',
+          color: '#5DC0E8',
           letterSpacing: '-0.02em',
           paddingTop: '2px',
         }}
@@ -138,7 +138,7 @@ export function Immersion() {
               <defs>
                 <linearGradient id="sparkleGrad" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0%" stopColor="#7FD8FF" />
-                  <stop offset="50%" stopColor="#3ABEF9" />
+                  <stop offset="50%" stopColor="#5DC0E8" />
                   <stop offset="100%" stopColor="#14A5E8" />
                 </linearGradient>
               </defs>
@@ -162,7 +162,7 @@ export function Immersion() {
               textShadow: 'rgba(58,190,249,0.18) 0 0 24px, rgba(58,190,249,0.12) 0 0 48px',
             }}
           >
-            Construimos <span style={{ color: '#3ABEF9' }}>con IA</span>, no encima de IA.
+            Construimos <span style={{ color: '#5DC0E8' }}>con IA</span>, no encima de IA.
           </h2>
 
           <p

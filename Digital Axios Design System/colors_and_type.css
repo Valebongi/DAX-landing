@@ -1,0 +1,230 @@
+/* =========================================================================
+   DIGITAL AXIOS — COLORS & TYPE
+   Single source of truth for foundational design tokens.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   FONTS (Google Fonts; substituted — flagged for user review)
+   ------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* =====================================================================
+     COLOR — Brand
+     ===================================================================== */
+  --dax-blue:        #3ABEF9;   /* signature aqua-cyan; primary accent      */
+  --dax-blue-600:    #14A5E8;   /* hover / pressed for primary actions      */
+  --dax-blue-100:    #DBF1FE;   /* surface tint — cards, badges, callouts   */
+  --dax-blue-050:    #F0F8FE;   /* lightest tint — section bg, hover row    */
+
+  --dax-navy-900:    #071529;   /* deepest ink; reserved for headings + logo mark */
+  --dax-navy-800:    #0A2240;   /* primary dark surface (dark bg pairings)  */
+  --dax-navy-700:    #0F2D5C;   /* secondary dark / borders on dark         */
+  --dax-navy-600:    #1B3F76;   /* dark surface elevated; dividers on navy  */
+
+  /* =====================================================================
+     COLOR — Neutrals (light-first)
+     ===================================================================== */
+  --neutral-000:     #FFFFFF;
+  --neutral-050:     #FAFBFC;
+  --neutral-100:     #F2F4F7;
+  --neutral-200:     #E6EAF0;
+  --neutral-300:     #CBD2DD;
+  --neutral-400:     #97A1B2;
+  --neutral-500:     #5E6A7E;
+  --neutral-600:     #3D485B;
+  --neutral-700:     #232C3D;
+
+  /* =====================================================================
+     COLOR — Semantic
+     ===================================================================== */
+  --bg:              var(--neutral-000);     /* default page bg              */
+  --bg-subtle:       var(--neutral-050);     /* sections, alternating rows   */
+  --bg-muted:        var(--neutral-100);     /* code blocks, disabled tracks */
+  --bg-tint:         var(--dax-blue-050);    /* brand-tinted surface         */
+  --bg-inverse:      var(--dax-navy-900);    /* dark / hero / footer         */
+  --bg-inverse-2:    var(--dax-navy-800);    /* dark elevated                */
+
+  --fg-1:            var(--dax-navy-900);    /* primary text                 */
+  --fg-2:            var(--neutral-600);     /* secondary text / body lead   */
+  --fg-3:            var(--neutral-500);     /* tertiary / supporting        */
+  --fg-4:            var(--neutral-400);     /* placeholder / disabled       */
+  --fg-inverse-1:    #FFFFFF;                /* primary text on dark         */
+  --fg-inverse-2:    #BFD0E8;                /* secondary text on dark       */
+
+  --accent:          var(--dax-blue);
+  --accent-fg:       var(--dax-navy-900);    /* text on solid blue           */
+
+  --border:          var(--neutral-200);
+  --border-strong:   var(--neutral-300);
+  --border-inverse:  var(--dax-navy-700);
+
+  --success:         #16A34A;
+  --warning:         #D97706;
+  --danger:          #DC2626;
+
+  /* =====================================================================
+     TYPE — Family stacks
+     ===================================================================== */
+  --font-display:    'Sora', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans:       'Geist', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:       'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* =====================================================================
+     TYPE — Scale (modular, base 16 → 1.18 ratio with overrides)
+     ===================================================================== */
+  --fs-display-1:    72px;   --lh-display-1:    1.02;   --ls-display-1:   -0.025em;
+  --fs-display-2:    56px;   --lh-display-2:    1.04;   --ls-display-2:   -0.022em;
+  --fs-h1:           40px;   --lh-h1:           1.10;   --ls-h1:          -0.02em;
+  --fs-h2:           32px;   --lh-h2:           1.15;   --ls-h2:          -0.015em;
+  --fs-h3:           24px;   --lh-h3:           1.25;   --ls-h3:          -0.01em;
+  --fs-h4:           20px;   --lh-h4:           1.30;   --ls-h4:          -0.005em;
+  --fs-lead:         18px;   --lh-lead:         1.55;   --ls-lead:         0;
+  --fs-body:         16px;   --lh-body:         1.55;   --ls-body:         0;
+  --fs-sm:           14px;   --lh-sm:           1.50;   --ls-sm:           0;
+  --fs-xs:           12px;   --lh-xs:           1.45;   --ls-xs:           0.01em;
+  --fs-eyebrow:      12px;   --lh-eyebrow:      1.20;   --ls-eyebrow:      0.16em;  /* ALL-CAPS */
+  --fs-code:         14px;   --lh-code:         1.6;    --ls-code:         0;
+
+  /* =====================================================================
+     SPACING (4-px base, compact density)
+     ===================================================================== */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+
+  /* =====================================================================
+     RADII — generous rounding (matches DAX wordmark personality)
+     ===================================================================== */
+  --radius-xs:  4px;
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --radius-xl:  20px;
+  --radius-2xl: 28px;
+  --radius-pill: 999px;
+
+  /* =====================================================================
+     SHADOWS — soft, layered, never harsh
+     ===================================================================== */
+  --shadow-xs:    0 1px 2px rgba(7, 21, 41, 0.04);
+  --shadow-sm:    0 1px 3px rgba(7, 21, 41, 0.06), 0 1px 2px rgba(7, 21, 41, 0.04);
+  --shadow-md:    0 6px 16px -4px rgba(7, 21, 41, 0.08), 0 2px 6px rgba(7, 21, 41, 0.04);
+  --shadow-lg:    0 18px 40px -12px rgba(7, 21, 41, 0.14), 0 4px 12px rgba(7, 21, 41, 0.05);
+  --shadow-glow:  0 0 0 4px rgba(58, 190, 249, 0.20);
+  --shadow-focus: 0 0 0 3px rgba(58, 190, 249, 0.45);
+
+  /* =====================================================================
+     MOTION
+     ===================================================================== */
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);   /* default UI ease     */
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);  /* hero / reveal       */
+  --dur-fast:    120ms;
+  --dur-base:    200ms;
+  --dur-slow:    320ms;
+}
+
+/* =========================================================================
+   SEMANTIC TYPE CLASSES — drop-in
+   ========================================================================= */
+.dax-display-1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-display-1);
+  line-height: var(--lh-display-1);
+  letter-spacing: var(--ls-display-1);
+  color: var(--fg-1);
+}
+.dax-display-2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-display-2);
+  line-height: var(--lh-display-2);
+  letter-spacing: var(--ls-display-2);
+  color: var(--fg-1);
+}
+.dax-h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+  color: var(--fg-1);
+}
+.dax-h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
+  color: var(--fg-1);
+}
+.dax-h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--ls-h3);
+  color: var(--fg-1);
+}
+.dax-h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+  letter-spacing: var(--ls-h4);
+  color: var(--fg-1);
+}
+.dax-lead {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  color: var(--fg-2);
+}
+.dax-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg-2);
+}
+.dax-small {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  color: var(--fg-3);
+}
+.dax-xs {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  color: var(--fg-3);
+}
+.dax-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-eyebrow);
+  line-height: var(--lh-eyebrow);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.dax-code {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--fs-code);
+  line-height: var(--lh-code);
+  color: var(--fg-1);
+}

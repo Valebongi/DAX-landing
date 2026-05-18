@@ -38,6 +38,33 @@
   /* Glow */
   --glow-electric:      rgba(57, 190, 249, 0.22);
   --glow-blue:          rgba(57, 190, 249, 0.15);
+
+  /* ─── Design System tokens (middle/light sections) ─── */
+  --bg:              #FFFFFF;
+  --bg-subtle:       #FAFBFC;
+  --bg-tint:         #F0F8FE;
+  --fg-1:            #071529;
+  --fg-2:            #3D485B;
+  --fg-3:            #5E6A7E;
+  --dax-blue-600:    #14A5E8;
+  --dax-navy-900:    #071529;
+  --border:          #E6EAF0;
+  --border-strong:   #CBD2DD;
+  --border-inverse:  rgba(10, 34, 64, 0.45);
+  --font-display:    var(--font-sora), 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-sans:       var(--font-outfit), 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --radius-xs:       4px;
+  --radius-sm:       6px;
+  --radius-md:       10px;
+  --radius-lg:       14px;
+  --radius-xl:       20px;
+  --radius-2xl:      28px;
+  --radius-pill:     999px;
+  --ease-standard:   cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:        120ms;
+  --dur-base:        200ms;
+  --dur-slow:        320ms;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────── */
@@ -141,6 +168,19 @@ p, span, button, a {
 ::-webkit-scrollbar-thumb {
   background: var(--dax-slate);
   border-radius: 2px;
+}
+
+/* ─── Proof Row Carousel ─────────────────────────────────────── */
+
+@keyframes proof-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.proof-track {
+  animation: proof-scroll 48s linear infinite;
+}
+.proof-track:hover {
+  animation-play-state: paused;
 }
 
 /* ─── Utilities ──────────────────────────────────────────────── */

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .btn {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    padding: 12px 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard), color var(--dur-fast) var(--ease-standard), box-shadow var(--dur-fast) var(--ease-standard);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary { background: var(--dax-blue); color: var(--dax-navy-900); }
+  .btn-primary:hover { background: var(--dax-blue-600); color: #fff; }
+  .btn-secondary { background: var(--bg); color: var(--fg-1); border-color: var(--border-strong); }
+  .btn-secondary:hover { background: var(--dax-blue-100); border-color: var(--dax-blue); color: var(--dax-navy-900); }
+  .btn-ghost { background: transparent; color: var(--fg-1); }
+  .btn-ghost:hover { background: var(--bg-muted); }
+  .btn-dark { background: var(--dax-navy-900); color: #fff; }
+  .btn-dark:hover { background: var(--dax-navy-700); }
+  .btn-sm { padding: 8px 12px; font-size: 12px; border-radius: var(--radius-sm); }
+  .btn-lg { padding: 16px 24px; font-size: 16px; border-radius: var(--radius-lg); }
+  .btn[disabled] { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+  .row { gap: 12px; flex-wrap: wrap; }
+  .arrow { width: 14px; height: 14px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Buttons · primary, secondary, ghost, dark</p>
+  <div class="row">
+    <button class="btn btn-primary">Book a working session<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+    <button class="btn btn-secondary">View case studies</button>
+    <button class="btn btn-ghost">Read brief</button>
+    <button class="btn btn-dark">Talk to engineering</button>
+  </div>
+  <div class="row" style="margin-top: 2px;">
+    <button class="btn btn-primary btn-sm">Small</button>
+    <button class="btn btn-primary">Default</button>
+    <button class="btn btn-primary btn-lg">Large</button>
+    <button class="btn btn-primary" disabled>Disabled</button>
+  </div>
+</div>
+</body>
+</html>

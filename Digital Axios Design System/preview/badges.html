@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Badges</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .row { gap: 8px; flex-wrap: wrap; }
+  .badge {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.4;
+  }
+  .badge .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .b-brand { background: var(--bg-tint); color: var(--dax-navy-900); }
+  .b-neutral { background: var(--bg-muted); color: var(--fg-1); }
+  .b-outline { background: transparent; border: 1px solid var(--border-strong); color: var(--fg-2); }
+  .b-dark { background: var(--dax-navy-900); color: var(--dax-blue); }
+  .b-success { background: #DCFCE7; color: #166534; }
+  .b-warning { background: #FEF3C7; color: #92400E; }
+  .b-danger  { background: #FEE2E2; color: #991B1B; }
+  .tag { font-family: var(--font-mono); font-size: 11px; padding: 3px 8px; background: var(--bg-muted); color: var(--fg-2); border-radius: var(--radius-sm); }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Status chips · tags · metrics</p>
+  <div class="row">
+    <span class="badge b-brand"><span class="dot" style="background: var(--dax-blue);"></span>Engaged</span>
+    <span class="badge b-success"><span class="dot" style="background: var(--success);"></span>Shipped</span>
+    <span class="badge b-warning"><span class="dot" style="background: var(--warning);"></span>In review</span>
+    <span class="badge b-danger"><span class="dot" style="background: var(--danger);"></span>Blocker</span>
+    <span class="badge b-neutral">Discovery</span>
+    <span class="badge b-outline">Optional</span>
+    <span class="badge b-dark">Production</span>
+  </div>
+  <div class="row">
+    <span class="tag">microservices</span>
+    <span class="tag">vector-db</span>
+    <span class="tag">ai-pipelines</span>
+    <span class="tag">platform</span>
+    <span class="tag">staff+</span>
+  </div>
+</div>
+</body>
+</html>

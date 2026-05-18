@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Cards</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  body { background: var(--bg-subtle); }
+  .card { background: transparent; padding: 22px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .dx-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .dx-card.tinted { background: var(--bg-tint); border-color: rgba(58,190,249,0.25); }
+  .dx-card.dark   { background: var(--bg-inverse); border-color: var(--border-inverse); color: #fff; }
+  .metric { font-family: var(--font-mono); font-size: 32px; color: var(--fg-1); font-weight: 600; letter-spacing: -0.02em; }
+  .dark .metric { color: var(--dax-blue); }
+  .title { font-family: var(--font-display); font-weight: 600; font-size: 16px; color: var(--fg-1); }
+  .dark .title { color: #fff; }
+  .desc { font-family: var(--font-sans); font-size: 13px; color: var(--fg-2); line-height: 1.5; }
+  .dark .desc { color: var(--fg-inverse-2); }
+  .pill { font-family: var(--font-sans); font-size: 11px; font-weight: 600; padding: 4px 10px; background: rgba(58,190,249,0.18); color: var(--dax-navy-900); border-radius: var(--radius-pill); align-self: flex-start; }
+  .dark .pill { background: rgba(58,190,249,0.18); color: var(--dax-blue); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid">
+    <div class="dx-card">
+      <span class="pill">Case study</span>
+      <div class="metric">3.4×</div>
+      <div class="title">Deploy throughput</div>
+      <div class="desc">A B2B SaaS team moved from weekly to multi-daily ships in 9 weeks.</div>
+    </div>
+    <div class="dx-card tinted">
+      <span class="pill" style="background: rgba(7,21,41,0.08);">Capability</span>
+      <div class="title">Vector search at scale</div>
+      <div class="desc">12 M documents, p99 &lt; 80 ms, tenant-isolated. Ready for production.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

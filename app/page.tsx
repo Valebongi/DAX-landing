@@ -1,6 +1,6 @@
 import { Navigation } from '@/components/Navigation'
 import { Hero } from '@/components/sections/Hero'
-import { Philosophy } from '@/components/sections/Philosophy'
+import { ProofRow } from '@/components/sections/ProofRow'
 import { Capabilities } from '@/components/sections/Capabilities'
 import { Immersion } from '@/components/sections/Immersion'
 import { Craftsmanship } from '@/components/sections/Craftsmanship'
@@ -26,17 +26,16 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <SectionBridge from="#061528" to="#F2F4F8" height={420} />
-        <Philosophy />
-        <SectionBridge from="#F2F4F8" to="#E8ECF2" height={80} />
+        <SectionBridge from="#061528" to="#FFFFFF" height={420} />
+        <ProofRow />
         <Capabilities />
-        <SectionBridge from="#E8ECF2" to="#061528" height={420} />
+        <SectionBridge from="#FFFFFF" to="#FAFBFC" height={60} />
         <Immersion />
-        <SectionBridge from="#061528" to="#F2F4F8" height={420} />
+        <SectionBridge from="#FAFBFC" to="#FFFFFF" height={60} />
         <Craftsmanship />
-        <SectionBridge from="#F2F4F8" to="#0E2138" height={420} />
+        <SectionBridge from="#FFFFFF" to="#F0F8FE" height={60} />
         <Showcase />
-        <SectionBridge from="#0E2138" to="#061528" height={120} />
+        <SectionBridge from="#F0F8FE" to="#061528" height={420} />
         <Closing />
       </main>
       <Footer />

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Motion</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .demo {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    background: var(--bg);
+    display: flex; flex-direction: column; gap: 10px;
+    overflow: hidden;
+  }
+  .lbl { font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--fg-1); }
+  .hint { font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); }
+  .stage { position: relative; height: 36px; background: var(--bg-subtle); border-radius: var(--radius-sm); overflow: hidden; }
+  .ball { position: absolute; top: 50%; transform: translate(0, -50%); width: 26px; height: 26px; border-radius: var(--radius-sm); background: var(--dax-blue); left: 6px; }
+  @keyframes slide-std { 0% { left: 6px; } 50% { left: calc(100% - 32px); } 100% { left: 6px; } }
+  @keyframes slide-emp { 0% { left: 6px; } 50% { left: calc(100% - 32px); } 100% { left: 6px; } }
+  @keyframes fade-cycle { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+  .std .ball { animation: slide-std 2200ms var(--ease-standard) infinite; }
+  .emp .ball { animation: slide-emp 2200ms var(--ease-emphasized) infinite; }
+  .fade .ball { animation: fade-cycle 1600ms var(--ease-standard) infinite; }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Motion · quiet, short, navy-tint</p>
+  <div class="grid">
+    <div class="demo std">
+      <span class="lbl">Standard ease</span>
+      <div class="stage"><div class="ball"></div></div>
+      <span class="hint">200 ms · cubic-bezier(.2,.8,.2,1)</span>
+    </div>
+    <div class="demo emp">
+      <span class="lbl">Emphasized</span>
+      <div class="stage"><div class="ball"></div></div>
+      <span class="hint">320 ms · hero reveals only</span>
+    </div>
+    <div class="demo fade">
+      <span class="lbl">Crossfade</span>
+      <div class="stage"><div class="ball"></div></div>
+      <span class="hint">120 ms · state changes</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

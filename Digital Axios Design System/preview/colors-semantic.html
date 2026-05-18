@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Semantic Colors</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .row-item { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg); }
+  .dot { width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0; }
+  .meta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .lbl { font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--fg-1); }
+  .var { font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Semantic · usage roles</p>
+  <div class="grid">
+    <div class="row-item"><div class="dot" style="background:var(--bg-tint); border:1px solid var(--border);"></div><div class="meta"><span class="lbl">Brand tint surface</span><span class="var">--bg-tint · #F0F8FE</span></div></div>
+    <div class="row-item"><div class="dot" style="background:var(--accent);"></div><div class="meta"><span class="lbl">Primary accent</span><span class="var">--accent · #3ABEF9</span></div></div>
+    <div class="row-item"><div class="dot" style="background:var(--bg-inverse);"></div><div class="meta"><span class="lbl">Inverse surface</span><span class="var">--bg-inverse · #071529</span></div></div>
+    <div class="row-item"><div class="dot" style="background:var(--fg-1);"></div><div class="meta"><span class="lbl">Primary text</span><span class="var">--fg-1 · #071529</span></div></div>
+    <div class="row-item"><div class="dot" style="background:var(--success);"></div><div class="meta"><span class="lbl">Success</span><span class="var">--success · #16A34A</span></div></div>
+    <div class="row-item"><div class="dot" style="background:var(--warning);"></div><div class="meta"><span class="lbl">Warning</span><span class="var">--warning · #D97706</span></div></div>
+    <div class="row-item"><div class="dot" style="background:var(--danger);"></div><div class="meta"><span class="lbl">Danger</span><span class="var">--danger · #DC2626</span></div></div>
+    <div class="row-item"><div class="dot" style="background:var(--bg); border:1px solid var(--border-strong);"></div><div class="meta"><span class="lbl">Default surface</span><span class="var">--bg · #FFFFFF</span></div></div>
+  </div>
+</div>
+</body>
+</html>

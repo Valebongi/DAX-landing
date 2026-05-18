@@ -1,197 +1,141 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import { FadeIn, RevealText } from '@/components/ui/RevealText'
-
-const phases = [
+const items = [
   {
-    number: '01',
-    title: 'Cinematic Direction',
-    body: 'We begin with atmosphere, not architecture. The emotional tone is defined before the first element is placed. Every project starts as a feeling.',
-    accent: 'var(--dax-electric)',
+    num: '01',
+    title: 'Pods de dos a tres senior.',
+    desc: 'Cada engagement es ownership real. Nadie es "extended team", nadie procesa tickets de otro. Los que diseñan son los que escriben, y los que escriben firman el deploy.',
   },
   {
-    number: '02',
-    title: 'Artistic Engineering',
-    body: 'Code is written like a composition. Every animation is timed. Every interaction is choreographed. The technical and the artistic are inseparable.',
-    accent: 'var(--dax-electric-dark)',
+    num: '02',
+    title: 'Ciclos de seis semanas.',
+    desc: 'Sin sprints, sin standups ritualizados. Entregamos en bloques que tu equipo puede mergear el viernes y empezar a operar el lunes.',
   },
   {
-    number: '03',
-    title: 'Premium Execution',
-    body: 'The final experience should feel inevitable. Each detail — from micro-interaction to typographic spacing — is refined until it disappears into naturalness.',
-    accent: 'rgba(57, 190, 249, 0.6)',
+    num: '03',
+    title: 'Soluciones a medida, no plantillas.',
+    desc: 'Cada producto se diseña fresh, en base al estado real de tu sistema y tus restricciones — no en base a lo que ya hicimos para otro cliente del rubro.',
+  },
+  {
+    num: '04',
+    title: 'Decisiones técnicas en el rato.',
+    desc: 'Sin steering committees ni comités de aprobación. Las decisiones técnicas se toman sobre código real, en el momento, con el dueño del sistema en el mismo canal.',
   },
 ]
 
 export function Craftsmanship() {
   return (
     <section
-      className="relative py-36 md:py-52 overflow-hidden"
-      style={{ background: 'var(--dax-surface)' }}
+      id="proceso"
+      style={{ padding: '96px 0', background: '#FFFFFF' }}
     >
-      {/* Subtle bottom-left glow */}
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          bottom: '5%',
-          left: '-5%',
-          width: '500px',
-          height: '500px',
-          background: 'radial-gradient(circle, rgba(57, 190, 249, 0.06) 0%, transparent 65%)',
-          filter: 'blur(70px)',
-        }}
-      />
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 56px' }}>
+        <header
+          style={{
+            marginBottom: '48px',
+            maxWidth: '720px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '14px',
+          }}
+        >
+          <p
+            style={{
+              fontFamily: 'var(--font-sans)',
+              fontWeight: 600,
+              fontSize: '12px',
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: '#14A5E8',
+              margin: 0,
+            }}
+          >
+            Cómo trabajamos
+          </p>
+          <h2
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontWeight: 700,
+              fontSize: 'clamp(28px, 3vw, 36px)',
+              lineHeight: 1.12,
+              letterSpacing: '-0.018em',
+              color: '#071529',
+              margin: 0,
+            }}
+          >
+            Sin sprint planning. Sin tickets vacíos. Soluciones a medida en cada producto.
+          </h2>
+          <p
+            style={{
+              fontFamily: 'var(--font-sans)',
+              fontWeight: 400,
+              fontSize: '18px',
+              lineHeight: 1.55,
+              color: '#3D485B',
+              margin: 0,
+              maxWidth: '56ch',
+            }}
+          >
+            Funcionamos como un pod chico, no como un proyecto. Cada engagement arranca de cero — sin plantillas reutilizadas, sin arquitecturas heredadas de otro cliente.
+          </p>
+        </header>
 
-      <div className="relative z-10 px-8 md:px-14 lg:px-20 xl:px-28 max-w-[1600px] mx-auto">
-        {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32">
-          <div className="lg:col-span-6">
-            <FadeIn className="flex items-center gap-4 mb-10">
-              <div className="w-6 h-px" style={{ background: 'var(--dax-electric)' }} />
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '0 56px',
+          }}
+        >
+          {items.map((item) => (
+            <article
+              key={item.num}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '10px',
+                padding: '28px 0',
+                borderTop: '1px solid #E6EAF0',
+              }}
+            >
               <span
                 style={{
                   fontFamily: 'var(--font-mono)',
-                  fontWeight: 300,
-                  fontSize: '0.62rem',
-                  letterSpacing: '0.28em',
-                  textTransform: 'uppercase',
-                  color: 'var(--dax-light-tertiary)',
+                  fontWeight: 600,
+                  fontSize: '13px',
+                  color: '#14A5E8',
+                  letterSpacing: '0.04em',
                 }}
               >
-                Our approach
+                {item.num}
               </span>
-            </FadeIn>
-            <RevealText>
-              <h2
+              <h3
                 style={{
-                  fontFamily: 'var(--font-outfit)',
+                  fontFamily: 'var(--font-display)',
                   fontWeight: 700,
-                  fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)',
-                  letterSpacing: '-0.025em',
-                  lineHeight: 1.05,
-                  color: 'var(--dax-light-primary)',
+                  fontSize: 'clamp(20px, 2vw, 26px)',
+                  lineHeight: 1.18,
+                  letterSpacing: '-0.015em',
+                  color: '#071529',
+                  margin: 0,
                 }}
               >
-                Every detail
-              </h2>
-            </RevealText>
-            <RevealText delay={0.1}>
-              <h2
+                {item.title}
+              </h3>
+              <p
                 style={{
-                  fontFamily: 'var(--font-outfit)',
-                  fontWeight: 300,
-                  fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)',
-                  letterSpacing: '-0.025em',
-                  lineHeight: 1.05,
-                  color: 'var(--dax-electric)',
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: '15px',
+                  lineHeight: 1.55,
+                  color: '#3D485B',
+                  margin: 0,
+                  maxWidth: '42ch',
                 }}
               >
-                is a decision.
-              </h2>
-            </RevealText>
-          </div>
-
-          <FadeIn delay={0.2} className="lg:col-span-4 lg:col-start-9 lg:self-end">
-            <p
-              style={{
-                fontFamily: 'var(--font-outfit)',
-                fontWeight: 300,
-                fontSize: 'clamp(0.82rem, 1vw, 0.93rem)',
-                lineHeight: 1.9,
-                color: 'var(--dax-light-secondary)',
-              }}
-            >
-              The work emerges from a precise three-phase process. Each phase
-              is inseparable from the others. The result should feel effortless
-              — as if it could not have been any other way.
-            </p>
-          </FadeIn>
-        </div>
-
-        {/* Phases */}
-        <div className="space-y-0">
-          {phases.map((phase, i) => (
-            <FadeIn key={phase.number} delay={0.1 + i * 0.14} direction="up">
-              <div
-                className="group grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-0 py-14 border-t"
-                style={{ borderColor: 'var(--dax-border-light)' }}
-              >
-                <div className="md:col-span-2">
-                  <motion.span
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                    style={{
-                      display: 'block',
-                      fontFamily: 'var(--font-mono)',
-                      fontWeight: 300,
-                      fontSize: 'clamp(4rem, 6vw, 7rem)',
-                      lineHeight: 0.85,
-                      letterSpacing: '-0.04em',
-                      color: phase.accent,
-                      opacity: 0.4,
-                    }}
-                  >
-                    {phase.number}
-                  </motion.span>
-                </div>
-
-                <div className="md:col-span-4 md:col-start-4 md:self-center">
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-outfit)',
-                      fontWeight: 600,
-                      fontSize: 'clamp(1.4rem, 2.2vw, 2.6rem)',
-                      letterSpacing: '-0.02em',
-                      lineHeight: 1.1,
-                      color: 'var(--dax-light-primary)',
-                      marginBottom: '1rem',
-                    }}
-                  >
-                    {phase.title}
-                  </h3>
-                </div>
-
-                <div className="md:col-span-5 md:col-start-8 md:self-center">
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-outfit)',
-                      fontWeight: 300,
-                      fontSize: '0.85rem',
-                      lineHeight: 1.85,
-                      color: 'var(--dax-light-secondary)',
-                    }}
-                  >
-                    {phase.body}
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
+                {item.desc}
+              </p>
+            </article>
           ))}
-
-          <div className="border-t" style={{ borderColor: 'var(--dax-border-light)' }} />
         </div>
-
-        {/* Closing statement */}
-        <FadeIn delay={0.2} className="mt-24 flex justify-end">
-          <blockquote
-            className="max-w-lg text-right"
-            style={{
-              fontFamily: 'var(--font-outfit)',
-              fontWeight: 300,
-              fontSize: 'clamp(1.2rem, 1.8vw, 1.8rem)',
-              lineHeight: 1.5,
-              letterSpacing: '-0.01em',
-              color: 'var(--dax-light-tertiary)',
-            }}
-          >
-            "The interface should feel inevitable.
-            <br />
-            Effortlessly right."
-          </blockquote>
-        </FadeIn>
       </div>
-
     </section>
   )
 }

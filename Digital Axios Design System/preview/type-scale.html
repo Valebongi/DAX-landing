@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Type Scale</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .row { display: grid; grid-template-columns: 72px 1fr 110px; align-items: baseline; gap: 16px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .row:last-child { border: 0; }
+  .tag { font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); letter-spacing: 0.04em; }
+  .sample { font-family: var(--font-display); color: var(--fg-1); letter-spacing: -0.02em; }
+  .sample.body { font-family: var(--font-sans); letter-spacing: 0; }
+  .px { font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); text-align: right; }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Type scale</p>
+  <div class="row"><span class="tag">H1</span><span class="sample" style="font-size:30px; font-weight:700;">Ship to production</span><span class="px">40 / 1.10</span></div>
+  <div class="row"><span class="tag">H2</span><span class="sample" style="font-size:24px; font-weight:600;">Ship to production</span><span class="px">32 / 1.15</span></div>
+  <div class="row"><span class="tag">H3</span><span class="sample" style="font-size:20px; font-weight:600;">Ship to production</span><span class="px">24 / 1.25</span></div>
+  <div class="row"><span class="tag">Lead</span><span class="sample body" style="font-size:16px; color: var(--fg-2);">Ship to production</span><span class="px">18 / 1.55</span></div>
+  <div class="row"><span class="tag">Body</span><span class="sample body" style="font-size:14px; color: var(--fg-2);">Ship to production</span><span class="px">16 / 1.55</span></div>
+  <div class="row"><span class="tag">Small</span><span class="sample body" style="font-size:13px; color: var(--fg-3);">Ship to production</span><span class="px">14 / 1.50</span></div>
+</div>
+</body>
+</html>

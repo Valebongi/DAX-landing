@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Logo</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .card { width: 700px; gap: 0; padding: 0; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+  .tile { aspect-ratio: 1 / 0.7; display: flex; align-items: center; justify-content: center; padding: 18px; position: relative; }
+  .tile img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .tile .lbl {
+    position: absolute; bottom: 8px; left: 10px;
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.04em; opacity: 0.75;
+  }
+  .t-white { background: var(--neutral-000); color: var(--fg-2); }
+  .t-tint  { background: var(--dax-blue); color: var(--dax-navy-900); }
+  .t-navy  { background: var(--dax-navy-900); color: var(--fg-inverse-2); }
+  .t-light { background: var(--bg-subtle); color: var(--fg-2); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid">
+    <div class="tile t-white">
+      <img src="../assets/dax-logo-whitebg.png" alt="DAX on white" />
+      <span class="lbl">on white</span>
+    </div>
+    <div class="tile t-light">
+      <img src="../assets/dax-logo-whitebg.png" alt="DAX on light" />
+      <span class="lbl">on bg-subtle</span>
+    </div>
+    <div class="tile t-tint">
+      <img src="../assets/dax-logo-lightbluebg.png" alt="DAX on blue" />
+      <span class="lbl">on dax-blue</span>
+    </div>
+    <div class="tile t-navy">
+      <img src="../assets/dax-logo-darkbg.png" alt="DAX on navy" />
+      <span class="lbl">on navy-900</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

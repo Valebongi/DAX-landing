@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .lbl { font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--fg-1); }
+  .hint { font-family: var(--font-sans); font-size: 11px; color: var(--fg-3); }
+  .err { color: var(--danger); }
+  input, select, textarea {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--fg-1);
+    padding: 10px 12px;
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: border-color var(--dur-fast) var(--ease-standard), box-shadow var(--dur-fast) var(--ease-standard);
+  }
+  input:focus { border-color: var(--dax-blue); box-shadow: var(--shadow-focus); }
+  input.error { border-color: var(--danger); }
+  input.error:focus { box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.25); }
+  input::placeholder { color: var(--fg-4); }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Form fields</p>
+  <div class="grid">
+    <div class="field"><label class="lbl">Work email</label><input type="email" placeholder="you@company.com" /></div>
+    <div class="field"><label class="lbl">Company size</label><input type="text" value="120 engineers" /></div>
+    <div class="field"><label class="lbl">Focus area <span class="hint">(focused)</span></label><input type="text" placeholder="Vector search, AI pipelines, …" autofocus /></div>
+    <div class="field"><label class="lbl">Slack handle <span class="err">required</span></label><input type="text" class="error" value="" placeholder="@yourname" /></div>
+  </div>
+</div>
+</body>
+</html>

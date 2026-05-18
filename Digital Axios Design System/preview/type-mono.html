@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Mono Type</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .block { background: var(--bg-inverse); border-radius: var(--radius-md); padding: 16px 20px; font-family: var(--font-mono); font-size: 13px; line-height: 1.65; color: var(--fg-inverse-1); border: 1px solid var(--border-inverse); }
+  .k { color: #7FDBFF; }
+  .s { color: #B5E48C; }
+  .c { color: #93A3BC; }
+  .n { color: var(--dax-blue); }
+  .meta { font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); margin: 0; }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Mono · JetBrains Mono — engineering surface</p>
+  <pre class="block" style="margin:0;">
+<span class="c">// vector search · p99 budget</span>
+<span class="k">const</span> hits = <span class="k">await</span> index.query({
+  vector: embed(q),
+  topK: <span class="n">12</span>,
+  filter: { tenant_id }
+});</pre>
+  <p class="meta">JetBrains Mono · 500 · 13 / 21.5 — used for code, metrics, identifiers, latencies.</p>
+</div>
+</body>
+</html>

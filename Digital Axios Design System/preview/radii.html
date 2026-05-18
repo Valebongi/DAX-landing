@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Radii</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .box { width: 70px; height: 70px; background: var(--dax-blue-100); border: 1.5px solid var(--dax-blue); }
+  .lbl { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); text-align: center; line-height: 1.4; }
+  .px { color: var(--fg-3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Corner radii</p>
+  <div class="grid">
+    <div class="item"><div class="box" style="border-radius: 4px;"></div><span class="lbl">xs<br/><span class="px">4</span></span></div>
+    <div class="item"><div class="box" style="border-radius: 6px;"></div><span class="lbl">sm<br/><span class="px">6</span></span></div>
+    <div class="item"><div class="box" style="border-radius: 10px;"></div><span class="lbl">md<br/><span class="px">10</span></span></div>
+    <div class="item"><div class="box" style="border-radius: 14px;"></div><span class="lbl">lg<br/><span class="px">14</span></span></div>
+    <div class="item"><div class="box" style="border-radius: 20px;"></div><span class="lbl">xl<br/><span class="px">20</span></span></div>
+    <div class="item"><div class="box" style="border-radius: 28px;"></div><span class="lbl">2xl<br/><span class="px">28</span></span></div>
+    <div class="item"><div class="box" style="border-radius: 999px;"></div><span class="lbl">pill<br/><span class="px">∞</span></span></div>
+  </div>
+</div>
+</body>
+</html>

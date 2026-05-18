@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Outfit } from 'next/font/google'
+import { Outfit, Sora } from 'next/font/google'
 import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { SmoothScrollProvider } from '@/providers/SmoothScrollProvider'
@@ -8,6 +8,13 @@ const outfit = Outfit({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
   variable: '--font-outfit',
+  display: 'swap',
+})
+
+const sora = Sora({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-sora',
   display: 'swap',
 })
 
@@ -31,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${outfit.variable} ${jetbrainsMono.variable}`}>
+    <html lang="es" className={`${outfit.variable} ${sora.variable} ${jetbrainsMono.variable}`}>
       <body>
         <SmoothScrollProvider>
           {children}

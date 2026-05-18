@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Brand Colors</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .swatches { display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px; }
+  .sw { border-radius: var(--radius-md); aspect-ratio: 1 / 1.2; padding: 10px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border); overflow: hidden; }
+  .sw .name { font-family: var(--font-sans); font-size: 11px; font-weight: 600; }
+  .sw .hex  { font-family: var(--font-mono); font-size: 10px; opacity: 0.7; }
+  .dark-text { color: var(--dax-navy-900); }
+  .light-text { color: #FFFFFF; }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Brand · Axios blue + Navy ink</p>
+  <div class="swatches">
+    <div class="sw dark-text" style="background: var(--dax-blue-050);"><span class="name">blue/050</span><span class="hex">#F0F8FE</span></div>
+    <div class="sw dark-text" style="background: var(--dax-blue-100);"><span class="name">blue/100</span><span class="hex">#DBF1FE</span></div>
+    <div class="sw dark-text" style="background: var(--dax-blue);"><span class="name">blue</span><span class="hex">#3ABEF9</span></div>
+    <div class="sw light-text" style="background: var(--dax-blue-600);"><span class="name">blue/600</span><span class="hex">#14A5E8</span></div>
+    <div class="sw light-text" style="background: var(--dax-navy-600);"><span class="name">navy/600</span><span class="hex">#1B3F76</span></div>
+    <div class="sw light-text" style="background: var(--dax-navy-700);"><span class="name">navy/700</span><span class="hex">#0F2D5C</span></div>
+    <div class="sw light-text" style="background: var(--dax-navy-800);"><span class="name">navy/800</span><span class="hex">#0A2240</span></div>
+    <div class="sw light-text" style="background: var(--dax-navy-900);"><span class="name">navy/900</span><span class="hex">#071529</span></div>
+  </div>
+</div>
+</body>
+</html>

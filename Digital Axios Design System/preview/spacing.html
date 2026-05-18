@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DAX — Spacing</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<link rel="stylesheet" href="_card.css" />
+<style>
+  .scale { display: flex; flex-direction: column; gap: 8px; }
+  .row { display: grid; grid-template-columns: 60px 1fr 60px; align-items: center; gap: 14px; }
+  .tag { font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); }
+  .bar { height: 12px; background: var(--dax-blue); border-radius: 2px; }
+  .px { font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); text-align: right; }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="eyebrow">Spacing · 4-px base · compact density</p>
+  <div class="scale">
+    <div class="row"><span class="tag">space-1</span><div class="bar" style="width:4px;"></div><span class="px">4 px</span></div>
+    <div class="row"><span class="tag">space-2</span><div class="bar" style="width:8px;"></div><span class="px">8 px</span></div>
+    <div class="row"><span class="tag">space-3</span><div class="bar" style="width:12px;"></div><span class="px">12 px</span></div>
+    <div class="row"><span class="tag">space-4</span><div class="bar" style="width:16px;"></div><span class="px">16 px</span></div>
+    <div class="row"><span class="tag">space-6</span><div class="bar" style="width:24px;"></div><span class="px">24 px</span></div>
+    <div class="row"><span class="tag">space-8</span><div class="bar" style="width:32px;"></div><span class="px">32 px</span></div>
+    <div class="row"><span class="tag">space-12</span><div class="bar" style="width:48px;"></div><span class="px">48 px</span></div>
+    <div class="row"><span class="tag">space-20</span><div class="bar" style="width:80px;"></div><span class="px">80 px</span></div>
+  </div>
+</div>
+</body>
+</html>

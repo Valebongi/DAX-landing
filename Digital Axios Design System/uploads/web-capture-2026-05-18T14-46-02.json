@@ -1,0 +1,306 @@
+[
+  {
+    "id": "cap_mpbbfows_cv48gz",
+    "selector": "svg",
+    "label": "svg",
+    "tag": "svg",
+    "url": "https://www.langchain.com/",
+    "title": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "timestamp": "2026-05-18T14:45:04.348Z",
+    "innerText": "",
+    "outerHTML": "<svg viewBox=\"0 0 1423 269\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <filter id=\"drop-shadow\" x=\"0\" y=\"0\" width=\"1422.99\" height=\"268.966\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n        <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood>\n        <feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"></feColorMatrix>\n        <feOffset dy=\"4\"></feOffset>\n        <feGaussianBlur stdDeviation=\"2\"></feGaussianBlur>\n        <feComposite in2=\"hardAlpha\" operator=\"out\"></feComposite>\n        <feColorMatrix type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0\"></feColorMatrix>\n        <feBlend mode=\"normal\" in2=\"BackgroundImageFix\" result=\"effect1_dropShadow\"></feBlend>\n        <feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_dropShadow\" result=\"shape\"></feBlend>\n      </filter>\n      <radialGradient id=\"fill-grad\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"translate(239 238) rotate(-5.20621) scale(1184.88 218.527)\">\n        <stop stop-opacity=\"0\"></stop>\n        <stop offset=\"1\" stop-color=\"#25486C\" stop-opacity=\"0.27\"></stop>\n      </radialGradient>\n    </defs>\n    <g filter=\"url(#drop-shadow)\">\n      <path fill=\"url(#fill-grad)\" d=\"M758.146 107.186C753.792 97.0393 741.217 86.1552 720.421 86.1552C686.581 86.1552 662.402 109.848 662.402 149.499C662.402 189.149 686.815 213.328 720.655 213.328C742.171 213.328 753.289 202.696 758.128 190.858H758.362V205.844C758.362 227.126 747.478 237.273 727.905 237.273C711.462 237.273 700.596 231.462 697.699 217.933H667.242C670.624 242.598 693.363 260.966 728.408 260.966C761.528 260.966 791.014 244.271 791.014 201.49V89.5374H758.398V107.186H758.146ZM727.419 188.915C704.931 188.915 693.561 170.295 693.561 149.751C693.561 129.206 705.165 110.838 727.419 110.838C749.673 110.838 761.258 131.868 761.258 149.751C761.258 167.633 752.065 188.915 727.419 188.915Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M517.598 138.885C517.598 108.176 503.098 85.6881 463.915 85.6881C431.029 85.6881 413.903 107.24 410.269 127.767H439.521C442.669 116.164 451.862 108.913 464.185 108.913C478.434 108.913 487.141 114.706 487.141 124.619C487.141 135.251 479.405 137.68 463.214 140.09C445.799 142.735 404.71 146.117 404.71 180.46C404.71 201.491 421.153 217.934 448.462 217.934C472.155 217.934 482.553 205.359 487.627 195.464H487.878V201.743C487.878 205.845 488.13 210.45 488.85 214.552H520.027C518.318 206.564 517.616 193.755 517.616 184.094V138.885H517.598ZM487.627 156.551C487.627 185.57 472.893 194.979 456.935 194.979C442.921 194.979 435.653 188.448 435.653 179.021C435.653 169.594 443.155 164.521 459.832 161.121C478.2 157.505 484.73 151.946 487.627 145.901V156.551Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M605.118 86.1711C585.779 86.1711 574.679 96.5514 567.645 111.07V89.5532H537.187V214.549H568.364V158.456C568.364 127.998 579.734 113.246 596.411 113.246C614.311 113.246 619.133 127.513 619.133 145.647V214.549H650.076V138.145C650.076 107.453 637.501 86.1711 605.1 86.1711H605.118Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M895.59 66.3461C919.032 66.3461 934.989 75.7729 944.182 96.0839H976.097C965.464 60.7871 938.857 38.7851 895.59 38.7851C843.131 38.7851 807.583 76.0428 807.583 128.484C807.583 180.926 842.879 217.698 895.339 217.68C938.137 217.68 967.389 194.724 976.097 160.381H943.948C936.932 178.749 921.946 190.119 895.59 190.119C862.219 190.119 839.983 164.015 839.983 128.484C839.983 92.9536 861.985 66.3641 895.59 66.3641V66.3461Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M1374.04 86.1711C1354.7 86.1711 1343.6 96.5514 1336.56 111.07V89.5532H1306.11V214.549H1337.28V158.456C1337.28 127.998 1348.65 113.246 1365.33 113.246C1383.21 113.246 1388.05 127.513 1388.05 145.647V214.549H1419V138.145C1419 107.453 1406.42 86.1711 1374.02 86.1711H1374.04Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M1285.08 52.6745H1252.93V81.6926H1285.08V52.6745Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M1253.4 111.198V214.533H1284.57V89.5373H1275.04C1263.07 89.5373 1253.4 99.234 1253.4 111.198Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M1061.68 86.1375C1042.34 86.1375 1031.24 96.5358 1024.21 110.802V41.9176H993.749V214.497H1024.93V158.404C1024.93 127.947 1036.3 113.195 1052.97 113.195C1070.87 113.195 1075.69 127.461 1075.69 145.595V214.497H1106.64V138.093C1106.64 107.402 1094.06 86.1195 1061.66 86.1195L1061.68 86.1375Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M1233.11 138.885C1233.11 108.176 1218.61 85.6881 1179.43 85.6881C1146.54 85.6881 1129.41 107.24 1125.8 127.767H1155.05C1158.2 116.164 1167.39 108.913 1179.71 108.913C1193.96 108.913 1202.67 114.706 1202.67 124.619C1202.67 135.251 1194.93 137.68 1178.74 140.09C1161.33 142.735 1120.24 146.117 1120.24 180.46C1120.24 201.491 1136.68 217.934 1163.99 217.934C1187.68 217.934 1198.08 205.359 1203.16 195.464H1203.39V201.743C1203.39 205.845 1203.62 210.45 1204.36 214.552H1235.54C1233.85 206.564 1233.13 193.755 1233.13 184.094V138.885H1233.11ZM1203.12 156.551C1203.12 185.57 1188.39 194.979 1172.43 194.979C1158.41 194.979 1151.15 188.448 1151.15 179.021C1151.15 169.594 1158.65 164.521 1175.32 161.121C1193.69 157.505 1200.22 151.946 1203.12 145.901V156.551Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M314.167 157.217V41.9176H282.846V178.967H292.417C304.434 178.967 314.167 169.234 314.167 157.217Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M394.943 186.863H282.846V214.55H394.943V186.863Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M76.2876 153.349C89.8399 139.796 97.4581 121.395 97.4581 102.23C97.4581 83.066 89.8333 64.6646 76.2876 51.112L25.1705 0C11.6248 13.5527 4 31.954 4 51.1185C4 70.2831 11.6248 88.6844 25.1705 102.237L76.281 153.349H76.2876Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M183.233 158.078C169.687 144.532 151.28 136.907 132.123 136.907C112.965 136.907 94.5579 144.532 81.0056 158.078L132.123 209.197C145.668 222.743 164.076 230.368 183.24 230.368C202.404 230.368 220.805 222.743 234.357 209.197L183.24 158.078H183.233Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M25.3041 209.077C38.8564 222.623 57.2573 230.248 76.4212 230.248V157.959H4.12707C4.13364 177.123 11.7519 195.525 25.3041 209.077Z\"></path>\n      <path fill=\"url(#fill-grad)\" d=\"M202.997 82.4997C189.445 68.9536 171.044 61.322 151.873 61.3286C132.709 61.3286 114.309 68.9536 100.756 82.5063L151.873 133.625L202.997 82.4997Z\"></path>\n    </g>\n  </svg>",
+    "rect": {
+      "x": 46,
+      "y": 361,
+      "width": 1430,
+      "height": 270
+    },
+    "computedStyles": {
+      "display": "block",
+      "width": "1429.57px",
+      "height": "270.237px",
+      "border": "0px none rgb(204, 233, 255)",
+      "box-sizing": "border-box",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(204, 233, 255)",
+      "font-family": "Aeonik, Tahoma, sans-serif",
+      "font-size": "16.4px",
+      "line-height": "24.6px",
+      "text-decoration": "none",
+      "overflow": "hidden",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "svg:not(:root)",
+        "css": "overflow: hidden;"
+      },
+      {
+        "selector": "*",
+        "css": "box-sizing: border-box;"
+      },
+      {
+        "selector": "*",
+        "css": "-webkit-font-smoothing: antialiased;"
+      },
+      {
+        "selector": ".logo-wrap svg",
+        "css": "width: 100%; height: auto; display: block;"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpbbfwh6_jl36dm",
+    "selector": "h2.t-heading-2-rg",
+    "label": "Get started with LangSmith",
+    "tag": "h2",
+    "url": "https://www.langchain.com/",
+    "title": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "timestamp": "2026-05-18T14:45:14.154Z",
+    "innerText": "Get started with LangSmith",
+    "outerHTML": "<h2 text-letters-animation=\"\" class=\"t-heading-2-rg text-c-blue-light-900\"><div class=\"word\" style=\"display: inline-block;\"><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">G</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">e</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">t</div></div> <div class=\"word\" style=\"display: inline-block;\"><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">s</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">t</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">a</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">r</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">t</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">e</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">d</div></div> <div class=\"word\" style=\"display: inline-block;\"><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">w</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">i</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">t</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">h</div></div> <div class=\"word\" style=\"display: inline-block;\"><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">L</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">a</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">n</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">g</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">S</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">m</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">i</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">t</div><div class=\"char\" style=\"display: inline-block; color: rgb(127, 200, 255); opacity: 1; text-shadow: none;\">h</div></div></h2>",
+    "rect": {
+      "x": 781,
+      "y": 209,
+      "width": 546,
+      "height": 144
+    },
+    "computedStyles": {
+      "display": "block",
+      "width": "546.325px",
+      "height": "144.325px",
+      "border": "0px none rgb(127, 200, 255)",
+      "box-sizing": "border-box",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(127, 200, 255)",
+      "font-family": "Twklausanne, Tahoma, sans-serif",
+      "font-size": "65.6px",
+      "font-weight": "300",
+      "line-height": "72.16px",
+      "letter-spacing": "-1.968px",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "*",
+        "css": "box-sizing: border-box;"
+      },
+      {
+        "selector": "h1, h2, h3, h4, h5, h6",
+        "css": "margin-bottom: 10px; font-weight: 700;"
+      },
+      {
+        "selector": "h2",
+        "css": "margin-top: 20px; font-size: 32px; line-height: 36px;"
+      },
+      {
+        "selector": "h2",
+        "css": "letter-spacing: -0.035rem; margin-top: 0px; margin-bottom: 0px; font-size: 3.5rem; font-weight: 400; line-height: 1.2;"
+      },
+      {
+        "selector": ".t-heading-2-rg",
+        "css": "letter-spacing: -0.03em; font-family: Twklausanne, Tahoma, sans-serif; font-size: 4rem; font-weight: 300; line-height: 110%;"
+      },
+      {
+        "selector": ".text-c-blue-light-900",
+        "css": "color: var(--_v-2-colors---c-blue-light--900);"
+      },
+      {
+        "selector": "h2",
+        "css": "font-size: 2rem;",
+        "media": "screen and (max-width: 991px)"
+      },
+      {
+        "selector": "h2",
+        "css": "font-size: 1.75rem;",
+        "media": "screen and (max-width: 767px)"
+      },
+      {
+        "selector": ".t-heading-2-rg",
+        "css": "font-size: 2.5rem; line-height: 120%;",
+        "media": "screen and (max-width: 767px)"
+      },
+      {
+        "selector": "*",
+        "css": "-webkit-font-smoothing: antialiased;"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpbbg9nz_2f621n",
+    "selector": "h1.t-heading-1-rg",
+    "label": "Powering the Agent Development Lifecycle",
+    "tag": "h1",
+    "url": "https://www.langchain.com/",
+    "title": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "timestamp": "2026-05-18T14:45:31.248Z",
+    "innerText": "Powering the\nAgent Development Lifecycle",
+    "outerHTML": "<h1 class=\"t-heading-1-rg color-t-7fc8ff homepage\">Powering the<br>Agent Development Lifecycle</h1>",
+    "rect": {
+      "x": 413,
+      "y": 210,
+      "width": 695,
+      "height": 126
+    },
+    "computedStyles": {
+      "display": "block",
+      "width": "695.463px",
+      "height": "126.275px",
+      "border": "0px none rgb(127, 200, 255)",
+      "box-sizing": "border-box",
+      "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(127, 200, 255)",
+      "font-family": "Twklausanne, Tahoma, sans-serif",
+      "font-size": "57.4px",
+      "font-weight": "300",
+      "line-height": "63.14px",
+      "letter-spacing": "-1.722px",
+      "text-align": "center",
+      "text-decoration": "none",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "h1",
+        "css": "margin: 0.67em 0px; font-size: 2em;"
+      },
+      {
+        "selector": "*",
+        "css": "box-sizing: border-box;"
+      },
+      {
+        "selector": "h1, h2, h3, h4, h5, h6",
+        "css": "margin-bottom: 10px; font-weight: 700;"
+      },
+      {
+        "selector": "h1",
+        "css": "margin-top: 20px; font-size: 38px; line-height: 44px;"
+      },
+      {
+        "selector": "h1",
+        "css": "letter-spacing: -0.14rem; margin-top: 0px; margin-bottom: 0px; font-family: Manrope, sans-serif; font-size: 5.5rem; font-weight: 400; line-height: 1;"
+      },
+      {
+        "selector": ".t-heading-1-rg",
+        "css": "letter-spacing: -0.03em; font-family: Twklausanne, Tahoma, sans-serif; font-size: 4.5rem; font-weight: 300; line-height: 110%;"
+      },
+      {
+        "selector": ".t-heading-1-rg.color-t-7fc8ff",
+        "css": "color: rgb(127, 200, 255);"
+      },
+      {
+        "selector": ".t-heading-1-rg.color-t-7fc8ff.homepage, .t-heading-1-rg.articles",
+        "css": "font-size: 3.5rem;"
+      },
+      {
+        "selector": "h1",
+        "css": "font-size: 4rem;",
+        "media": "screen and (max-width: 991px)"
+      },
+      {
+        "selector": "h1",
+        "css": "font-size: 3rem;",
+        "media": "screen and (max-width: 767px)"
+      },
+      {
+        "selector": ".t-heading-1-rg",
+        "css": "font-size: 3rem; line-height: 120%;",
+        "media": "screen and (max-width: 767px)"
+      },
+      {
+        "selector": ".t-heading-1-rg.color-t-7fc8ff.homepage",
+        "css": "font-size: 3rem;",
+        "media": "screen and (max-width: 767px)"
+      },
+      {
+        "selector": ".t-heading-1-rg.color-t-7fc8ff.homepage",
+        "css": "font-size: 2.25rem;",
+        "media": "screen and (max-width: 479px)"
+      },
+      {
+        "selector": "*",
+        "css": "-webkit-font-smoothing: antialiased;"
+      },
+      {
+        "selector": ".t-heading-1-rg.color-t-7fc8ff.homepage",
+        "css": "text-shadow: rgba(127, 200, 255, 0) 0px 0px 24px, rgba(127, 200, 255, 0) 0px 0px 48px, rgba(127, 200, 255, 0) 0px 2px 12px; animation: 500ms ease-out 300ms 1 normal forwards running glowIn;"
+      }
+    ]
+  },
+  {
+    "id": "cap_mpbbgivt_ei8py9",
+    "selector": "div.feature-card-wrapper",
+    "label": "div.feature-card-wrapper",
+    "tag": "div",
+    "url": "https://www.langchain.com/",
+    "title": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "timestamp": "2026-05-18T14:45:43.193Z",
+    "innerText": "",
+    "outerHTML": "<div class=\"feature-card-wrapper\"><img src=\"https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a0314276906b05561e307d5_langsmith-engine.avif\" loading=\"eager\" alt=\"\" class=\"feature-card-image\"><div class=\"feature-card-glow is-bigger\" style=\"transform: translate3d(0px, 0px, 0px) scale3d(0.99332, 0.99332, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;\"></div></div>",
+    "rect": {
+      "x": 929,
+      "y": 162,
+      "width": 662,
+      "height": 512
+    },
+    "computedStyles": {
+      "display": "flex",
+      "position": "relative",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "661.7px",
+      "height": "512.05px",
+      "padding": "24.6px 22.55px",
+      "border": "0.8px solid rgb(47, 75, 104)",
+      "border-radius": "32.8px",
+      "box-sizing": "border-box",
+      "background": "rgba(0, 0, 0, 0) linear-gradient(90deg, rgb(3, 7, 16), rgb(30, 59, 89)) repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(204, 233, 255)",
+      "font-family": "Aeonik, Tahoma, sans-serif",
+      "font-size": "16.4px",
+      "line-height": "24.6px",
+      "text-decoration": "none",
+      "flex": "0 0 auto",
+      "justify-content": "center",
+      "align-items": "center",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "*",
+        "css": "box-sizing: border-box;"
+      },
+      {
+        "selector": ".feature-card-wrapper",
+        "css": "border: 1px solid var(--_v-2-colors---c-blue-dark--600); background-image: linear-gradient(90deg, rgb(3, 7, 16), rgb(30, 59, 89)); border-radius: 2rem; flex: 0 0 auto; justify-content: center; align-items: center; padding: 1.5rem 1.375rem; display: flex; position: relative;"
+      },
+      {
+        "selector": ".feature-card-wrapper",
+        "css": "margin-left: 2rem;",
+        "media": "screen and (min-width: 1920px)"
+      },
+      {
+        "selector": ".feature-card-wrapper",
+        "css": "margin-top: 4rem; margin-left: auto; margin-right: auto;",
+        "media": "screen and (max-width: 991px)"
+      },
+      {
+        "selector": ".feature-card-wrapper",
+        "css": "margin-left: 0px; margin-right: 0px;",
+        "media": "screen and (max-width: 767px)"
+      },
+      {
+        "selector": ".feature-card-wrapper",
+        "css": "border-radius: 1rem; margin-top: 2rem; margin-bottom: 2rem; padding: 1rem 0.875rem;",
+        "media": "screen and (max-width: 479px)"
+      },
+      {
+        "selector": "*",
+        "css": "-webkit-font-smoothing: antialiased;"
+      }
+    ]
+  }
+]

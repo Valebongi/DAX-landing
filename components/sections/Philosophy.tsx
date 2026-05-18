@@ -33,16 +33,6 @@ export function Philosophy() {
       className="relative py-40 md:py-56 overflow-hidden"
       style={{ background: 'var(--dax-surface)' }}
     >
-      {/* ── Top: dissolve from navy hero ── */}
-      <div
-        className="absolute top-0 left-0 right-0 pointer-events-none"
-        style={{
-          height: 'clamp(200px, 28vh, 380px)',
-          background: 'linear-gradient(to bottom, #061528 0%, rgba(6,21,40,0.0) 100%)',
-          zIndex: 2,
-        }}
-      />
-
       {/* Subtle electric glow on light bg */}
       <div
         className="absolute pointer-events-none"
@@ -206,15 +196,6 @@ export function Philosophy() {
         </div>
       </div>
 
-      {/* ── Bottom: dissolve toward Capabilities (surface-low) ── */}
-      <div
-        className="absolute bottom-0 left-0 right-0 pointer-events-none"
-        style={{
-          height: 'clamp(180px, 22vh, 300px)',
-          background: 'linear-gradient(to bottom, transparent 0%, #E8ECF2 100%)',
-          zIndex: 2,
-        }}
-      />
     </section>
   )
 }

@@ -233,15 +233,6 @@ export function Capabilities() {
         </div>
       </div>
 
-      {/* ── Bottom: dissolve into Immersion (navy) ── */}
-      <div
-        className="absolute bottom-0 left-0 right-0 pointer-events-none"
-        style={{
-          height: 'clamp(260px, 35vh, 460px)',
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(6,21,40,0.15) 55%, #061528 100%)',
-          zIndex: 2,
-        }}
-      />
     </section>
   )
 }

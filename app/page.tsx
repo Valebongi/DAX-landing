@@ -7,26 +7,36 @@ import { Craftsmanship } from '@/components/sections/Craftsmanship'
 import { Showcase } from '@/components/sections/Showcase'
 import { Closing, Footer } from '@/components/sections/Closing'
 
+function SectionBridge({ from, to, height = 400 }: { from: string; to: string; height?: number }) {
+  return (
+    <div
+      aria-hidden
+      style={{
+        height,
+        background: `linear-gradient(to bottom, ${from}, ${to})`,
+        pointerEvents: 'none',
+      }}
+    />
+  )
+}
+
 export default function Home() {
   return (
     <>
       <Navigation />
       <main>
-        {/* Phase 1 — Awe */}
         <Hero />
-
-        {/* Phase 2 — Discovery */}
+        <SectionBridge from="#061528" to="#F2F4F8" height={420} />
         <Philosophy />
-
-        {/* Phase 3 — Immersion */}
+        <SectionBridge from="#F2F4F8" to="#E8ECF2" height={80} />
         <Capabilities />
+        <SectionBridge from="#E8ECF2" to="#061528" height={420} />
         <Immersion />
-
-        {/* Phase 4 — Trust & Vision */}
+        <SectionBridge from="#061528" to="#F2F4F8" height={420} />
         <Craftsmanship />
+        <SectionBridge from="#F2F4F8" to="#0E2138" height={420} />
         <Showcase />
-
-        {/* Phase 5 — Emotional Resolution */}
+        <SectionBridge from="#0E2138" to="#061528" height={120} />
         <Closing />
       </main>
       <Footer />

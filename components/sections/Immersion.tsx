@@ -21,19 +21,9 @@ export function Immersion() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 md:py-24 px-8 md:px-14 lg:px-20 xl:px-28 overflow-hidden"
+      className="relative py-16 md:py-24 px-8 md:px-14 lg:px-20 xl:px-28"
       style={{ background: 'var(--dax-navy)' }}
     >
-      {/* ── Top: continuation from Capabilities dissolve ── */}
-      <div
-        className="absolute top-0 left-0 right-0 pointer-events-none"
-        style={{
-          height: 'clamp(120px, 18vh, 240px)',
-          background: 'linear-gradient(to bottom, #061528 0%, transparent 100%)',
-          zIndex: 2,
-        }}
-      />
-
       <motion.div
         className="relative w-full overflow-hidden"
         style={{
@@ -204,15 +194,6 @@ export function Immersion() {
         </div>
       </motion.div>
 
-      {/* ── Bottom: dissolve into Craftsmanship (light surface) ── */}
-      <div
-        className="absolute bottom-0 left-0 right-0 pointer-events-none"
-        style={{
-          height: 'clamp(260px, 35vh, 460px)',
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(6,21,40,0.1) 50%, #F2F4F8 100%)',
-          zIndex: 2,
-        }}
-      />
     </section>
   )
 }

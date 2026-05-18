@@ -1,9 +1,8 @@
 'use client'
 
-import { useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { FadeIn, RevealText } from '@/components/ui/RevealText'
-import { GlowOrb } from '@/components/ui/GlowOrb'
 
 const capabilities = [
   {
@@ -45,41 +44,39 @@ const capabilities = [
 
 export function Capabilities() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
-  const sectionRef = useRef<HTMLDivElement>(null)
 
   return (
-    <section className="relative py-36 md:py-52 overflow-hidden">
-      {/* Atmospheric glow */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <GlowOrb
-          size={700}
-          color="rgba(131, 174, 202, 0.12)"
-          blur={100}
-          className="-top-20 right-0"
-          animated
-        />
-        <GlowOrb
-          size={500}
-          color="rgba(191, 175, 216, 0.10)"
-          blur={90}
-          className="bottom-0 left-20"
-        />
-      </div>
+    <section
+      className="relative py-36 md:py-52 overflow-hidden"
+      style={{ background: 'var(--dax-surface-low)' }}
+    >
+      {/* Subtle glow top-right */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '-10%',
+          right: '-5%',
+          width: '600px',
+          height: '600px',
+          background: 'radial-gradient(circle, rgba(57, 190, 249, 0.07) 0%, transparent 65%)',
+          filter: 'blur(80px)',
+        }}
+      />
 
       <div className="relative z-10 px-8 md:px-14 lg:px-20 xl:px-28 max-w-[1600px] mx-auto">
-        {/* Header row — asymmetric */}
+        {/* Header row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-28">
           <FadeIn className="lg:col-span-5">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-6 h-px" style={{ background: 'var(--dax-blue)' }} />
+              <div className="w-6 h-px" style={{ background: 'var(--dax-electric)' }} />
               <span
                 style={{
-                  fontFamily: 'var(--font-inter)',
+                  fontFamily: 'var(--font-mono)',
                   fontWeight: 300,
                   fontSize: '0.62rem',
                   letterSpacing: '0.28em',
                   textTransform: 'uppercase',
-                  color: 'var(--dax-tertiary)',
+                  color: 'var(--dax-light-tertiary)',
                 }}
               >
                 What we create
@@ -88,12 +85,12 @@ export function Capabilities() {
             <RevealText>
               <h2
                 style={{
-                  fontFamily: 'var(--font-cormorant)',
-                  fontWeight: 300,
+                  fontFamily: 'var(--font-outfit)',
+                  fontWeight: 700,
                   fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)',
                   letterSpacing: '-0.025em',
                   lineHeight: 1.05,
-                  color: 'var(--dax-primary)',
+                  color: 'var(--dax-light-primary)',
                 }}
               >
                 Experiences
@@ -102,13 +99,12 @@ export function Capabilities() {
             <RevealText delay={0.1}>
               <h2
                 style={{
-                  fontFamily: 'var(--font-cormorant)',
+                  fontFamily: 'var(--font-outfit)',
                   fontWeight: 300,
-                  fontStyle: 'italic',
                   fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)',
                   letterSpacing: '-0.025em',
                   lineHeight: 1.05,
-                  color: 'var(--dax-primary)',
+                  color: 'var(--dax-electric)',
                 }}
               >
                 beyond the expected.
@@ -119,11 +115,11 @@ export function Capabilities() {
           <FadeIn delay={0.2} className="lg:col-span-4 lg:col-start-9 lg:self-end">
             <p
               style={{
-                fontFamily: 'var(--font-inter)',
+                fontFamily: 'var(--font-outfit)',
                 fontWeight: 300,
                 fontSize: 'clamp(0.82rem, 1vw, 0.93rem)',
                 lineHeight: 1.9,
-                color: 'var(--dax-secondary)',
+                color: 'var(--dax-light-secondary)',
               }}
             >
               We operate at the intersection of creative vision and technical
@@ -134,7 +130,7 @@ export function Capabilities() {
         </div>
 
         {/* Capabilities list */}
-        <div className="border-t" style={{ borderColor: 'var(--dax-border)' }}>
+        <div className="border-t" style={{ borderColor: 'var(--dax-border-light)' }}>
           {capabilities.map((cap, i) => (
             <motion.div
               key={cap.number}
@@ -145,9 +141,9 @@ export function Capabilities() {
               <FadeIn delay={0.08 * i}>
                 <div
                   className="relative flex items-start md:items-center gap-6 md:gap-10 py-10 border-b cursor-default"
-                  style={{ borderColor: 'var(--dax-border)' }}
+                  style={{ borderColor: 'var(--dax-border-light)' }}
                 >
-                  {/* Hover glow */}
+                  {/* Hover highlight */}
                   <motion.div
                     className="absolute inset-0 pointer-events-none"
                     initial={{ opacity: 0 }}
@@ -155,7 +151,7 @@ export function Capabilities() {
                     transition={{ duration: 0.5 }}
                     style={{
                       background:
-                        'linear-gradient(90deg, rgba(131,174,202,0.04) 0%, rgba(166,152,191,0.03) 50%, transparent 100%)',
+                        'linear-gradient(90deg, rgba(57,190,249,0.05) 0%, rgba(26,159,216,0.03) 50%, transparent 100%)',
                     }}
                   />
 
@@ -163,10 +159,10 @@ export function Capabilities() {
                   <span
                     className="shrink-0 w-10 md:w-14"
                     style={{
-                      fontFamily: 'var(--font-cormorant)',
+                      fontFamily: 'var(--font-mono)',
                       fontWeight: 300,
-                      fontSize: 'clamp(0.95rem, 1.3vw, 1.2rem)',
-                      color: activeIndex === i ? 'var(--dax-blue)' : 'var(--dax-silver)',
+                      fontSize: 'clamp(0.85rem, 1.1vw, 1rem)',
+                      color: activeIndex === i ? 'var(--dax-electric)' : 'var(--dax-light-tertiary)',
                       transition: 'color 0.5s',
                       letterSpacing: '0.05em',
                     }}
@@ -178,27 +174,26 @@ export function Capabilities() {
                   <h3
                     className="shrink-0 w-auto md:w-72 lg:w-80"
                     style={{
-                      fontFamily: 'var(--font-cormorant)',
-                      fontWeight: 300,
-                      fontSize: 'clamp(1.4rem, 2.2vw, 2.4rem)',
+                      fontFamily: 'var(--font-outfit)',
+                      fontWeight: 600,
+                      fontSize: 'clamp(1.2rem, 2vw, 2.2rem)',
                       letterSpacing: '-0.02em',
                       lineHeight: 1.1,
-                      color: 'var(--dax-primary)',
+                      color: activeIndex === i ? 'var(--dax-navy)' : 'var(--dax-light-primary)',
                       transition: 'color 0.5s',
                     }}
                   >
                     {cap.title}
                   </h3>
 
-                  {/* Description — shown on all sizes but opacity varies */}
                   <p
                     className="hidden md:block flex-1"
                     style={{
-                      fontFamily: 'var(--font-inter)',
+                      fontFamily: 'var(--font-outfit)',
                       fontWeight: 300,
                       fontSize: '0.83rem',
                       lineHeight: 1.8,
-                      color: 'var(--dax-secondary)',
+                      color: 'var(--dax-light-secondary)',
                       opacity: activeIndex === i ? 1 : 0.7,
                       transition: 'opacity 0.5s',
                     }}
@@ -206,28 +201,26 @@ export function Capabilities() {
                     {cap.description}
                   </p>
 
-                  {/* Tag — right aligned */}
                   <span
                     className="hidden lg:block shrink-0 ml-auto"
                     style={{
-                      fontFamily: 'var(--font-inter)',
+                      fontFamily: 'var(--font-mono)',
                       fontWeight: 300,
                       fontSize: '0.6rem',
                       letterSpacing: '0.22em',
                       textTransform: 'uppercase',
-                      color: activeIndex === i ? 'var(--dax-violet)' : 'var(--dax-tertiary)',
+                      color: activeIndex === i ? 'var(--dax-electric)' : 'var(--dax-light-tertiary)',
                       transition: 'color 0.5s',
                     }}
                   >
                     {cap.tag}
                   </span>
 
-                  {/* Arrow */}
                   <motion.div
                     animate={{ x: activeIndex === i ? 0 : -4, opacity: activeIndex === i ? 1 : 0 }}
                     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     className="shrink-0 hidden lg:flex items-center"
-                    style={{ color: 'var(--dax-violet)' }}
+                    style={{ color: 'var(--dax-electric)' }}
                   >
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />

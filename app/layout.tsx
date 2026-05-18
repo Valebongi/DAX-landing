@@ -1,30 +1,29 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Inter } from 'next/font/google'
+import { Outfit } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { SmoothScrollProvider } from '@/providers/SmoothScrollProvider'
 
-const cormorant = Cormorant_Garamond({
+const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  style: ['normal', 'italic'],
-  variable: '--font-cormorant',
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-outfit',
   display: 'swap',
 })
 
-const inter = Inter({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['300', '400', '500'],
-  variable: '--font-inter',
+  variable: '--font-mono',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'DAX — Cinematic Digital Experience',
+  title: 'DAX — Ingeniería estratégica para empresas que escalan',
   description:
-    'A creative technology studio from Argentina. We engineer cinematic digital experiences where code meets emotion, and software becomes art.',
-  keywords: ['creative technology', 'digital experience', 'cinematic design', 'immersive interfaces', 'Argentina'],
+    'Diseñamos y construimos los microservicios, pipelines de IA y bases vectoriales que tu empresa necesita para crecer sin multiplicar headcount.',
   openGraph: {
-    title: 'DAX — Cinematic Digital Experience',
+    title: 'DAX — Ingeniería estratégica para empresas que escalan',
     description: 'We design digital worlds that feel like the future.',
     type: 'website',
   },
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="es" className={`${outfit.variable} ${jetbrainsMono.variable}`}>
       <body>
         <SmoothScrollProvider>
           {children}

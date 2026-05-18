@@ -1,69 +1,62 @@
 'use client'
 
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { FadeIn, RevealText } from '@/components/ui/RevealText'
-import { GlowOrb, GlowOrbSlow } from '@/components/ui/GlowOrb'
 
 const phases = [
   {
     number: '01',
     title: 'Cinematic Direction',
     body: 'We begin with atmosphere, not architecture. The emotional tone is defined before the first element is placed. Every project starts as a feeling.',
-    accent: 'var(--dax-blue)',
+    accent: 'var(--dax-electric)',
   },
   {
     number: '02',
     title: 'Artistic Engineering',
     body: 'Code is written like a composition. Every animation is timed. Every interaction is choreographed. The technical and the artistic are inseparable.',
-    accent: 'var(--dax-violet)',
+    accent: 'var(--dax-electric-dark)',
   },
   {
     number: '03',
     title: 'Premium Execution',
     body: 'The final experience should feel inevitable. Each detail — from micro-interaction to typographic spacing — is refined until it disappears into naturalness.',
-    accent: 'var(--dax-lavender)',
+    accent: 'rgba(57, 190, 249, 0.6)',
   },
 ]
 
 export function Craftsmanship() {
-  const sectionRef = useRef<HTMLDivElement>(null)
-
   return (
-    <section className="relative py-36 md:py-52 overflow-hidden">
-      {/* Atmospheric glow */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <GlowOrbSlow
-          size={800}
-          color="rgba(166, 152, 191, 0.12)"
-          blur={130}
-          className="top-0 right-0"
-          animationDelay={4}
-        />
-        <GlowOrb
-          size={500}
-          color="rgba(131, 174, 202, 0.11)"
-          blur={90}
-          className="bottom-20 left-10"
-          animated
-          animationDelay={9}
-        />
-      </div>
+    <section
+      className="relative py-36 md:py-52 overflow-hidden"
+      style={{ background: 'var(--dax-surface)' }}
+    >
+      {/* Subtle bottom-left glow */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          bottom: '5%',
+          left: '-5%',
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(57, 190, 249, 0.06) 0%, transparent 65%)',
+          filter: 'blur(70px)',
+        }}
+      />
 
       <div className="relative z-10 px-8 md:px-14 lg:px-20 xl:px-28 max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32">
           <div className="lg:col-span-6">
             <FadeIn className="flex items-center gap-4 mb-10">
-              <div className="w-6 h-px" style={{ background: 'var(--dax-blue)' }} />
+              <div className="w-6 h-px" style={{ background: 'var(--dax-electric)' }} />
               <span
                 style={{
-                  fontFamily: 'var(--font-inter)',
+                  fontFamily: 'var(--font-mono)',
                   fontWeight: 300,
                   fontSize: '0.62rem',
                   letterSpacing: '0.28em',
                   textTransform: 'uppercase',
-                  color: 'var(--dax-tertiary)',
+                  color: 'var(--dax-light-tertiary)',
                 }}
               >
                 Our approach
@@ -72,12 +65,12 @@ export function Craftsmanship() {
             <RevealText>
               <h2
                 style={{
-                  fontFamily: 'var(--font-cormorant)',
-                  fontWeight: 300,
+                  fontFamily: 'var(--font-outfit)',
+                  fontWeight: 700,
                   fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)',
                   letterSpacing: '-0.025em',
                   lineHeight: 1.05,
-                  color: 'var(--dax-primary)',
+                  color: 'var(--dax-light-primary)',
                 }}
               >
                 Every detail
@@ -86,13 +79,12 @@ export function Craftsmanship() {
             <RevealText delay={0.1}>
               <h2
                 style={{
-                  fontFamily: 'var(--font-cormorant)',
+                  fontFamily: 'var(--font-outfit)',
                   fontWeight: 300,
-                  fontStyle: 'italic',
                   fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)',
                   letterSpacing: '-0.025em',
                   lineHeight: 1.05,
-                  color: 'var(--dax-primary)',
+                  color: 'var(--dax-electric)',
                 }}
               >
                 is a decision.
@@ -103,11 +95,11 @@ export function Craftsmanship() {
           <FadeIn delay={0.2} className="lg:col-span-4 lg:col-start-9 lg:self-end">
             <p
               style={{
-                fontFamily: 'var(--font-inter)',
+                fontFamily: 'var(--font-outfit)',
                 fontWeight: 300,
                 fontSize: 'clamp(0.82rem, 1vw, 0.93rem)',
                 lineHeight: 1.9,
-                color: 'var(--dax-secondary)',
+                color: 'var(--dax-light-secondary)',
               }}
             >
               The work emerges from a precise three-phase process. Each phase
@@ -123,38 +115,36 @@ export function Craftsmanship() {
             <FadeIn key={phase.number} delay={0.1 + i * 0.14} direction="up">
               <div
                 className="group grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-0 py-14 border-t"
-                style={{ borderColor: 'var(--dax-border)' }}
+                style={{ borderColor: 'var(--dax-border-light)' }}
               >
-                {/* Number — large, architectural */}
                 <div className="md:col-span-2">
                   <motion.span
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                     style={{
                       display: 'block',
-                      fontFamily: 'var(--font-cormorant)',
+                      fontFamily: 'var(--font-mono)',
                       fontWeight: 300,
                       fontSize: 'clamp(4rem, 6vw, 7rem)',
                       lineHeight: 0.85,
                       letterSpacing: '-0.04em',
                       color: phase.accent,
-                      opacity: 0.35,
+                      opacity: 0.4,
                     }}
                   >
                     {phase.number}
                   </motion.span>
                 </div>
 
-                {/* Title + Body */}
                 <div className="md:col-span-4 md:col-start-4 md:self-center">
                   <h3
                     style={{
-                      fontFamily: 'var(--font-cormorant)',
-                      fontWeight: 300,
-                      fontSize: 'clamp(1.6rem, 2.5vw, 3rem)',
+                      fontFamily: 'var(--font-outfit)',
+                      fontWeight: 600,
+                      fontSize: 'clamp(1.4rem, 2.2vw, 2.6rem)',
                       letterSpacing: '-0.02em',
                       lineHeight: 1.1,
-                      color: 'var(--dax-primary)',
+                      color: 'var(--dax-light-primary)',
                       marginBottom: '1rem',
                     }}
                   >
@@ -165,11 +155,11 @@ export function Craftsmanship() {
                 <div className="md:col-span-5 md:col-start-8 md:self-center">
                   <p
                     style={{
-                      fontFamily: 'var(--font-inter)',
+                      fontFamily: 'var(--font-outfit)',
                       fontWeight: 300,
                       fontSize: '0.85rem',
                       lineHeight: 1.85,
-                      color: 'var(--dax-secondary)',
+                      color: 'var(--dax-light-secondary)',
                     }}
                   >
                     {phase.body}
@@ -179,8 +169,7 @@ export function Craftsmanship() {
             </FadeIn>
           ))}
 
-          {/* Final border */}
-          <div className="border-t" style={{ borderColor: 'var(--dax-border)' }} />
+          <div className="border-t" style={{ borderColor: 'var(--dax-border-light)' }} />
         </div>
 
         {/* Closing statement */}
@@ -188,13 +177,12 @@ export function Craftsmanship() {
           <blockquote
             className="max-w-lg text-right"
             style={{
-              fontFamily: 'var(--font-cormorant)',
+              fontFamily: 'var(--font-outfit)',
               fontWeight: 300,
-              fontStyle: 'italic',
-              fontSize: 'clamp(1.3rem, 2vw, 2rem)',
+              fontSize: 'clamp(1.2rem, 1.8vw, 1.8rem)',
               lineHeight: 1.5,
               letterSpacing: '-0.01em',
-              color: 'var(--dax-tertiary)',
+              color: 'var(--dax-light-tertiary)',
             }}
           >
             "The interface should feel inevitable.

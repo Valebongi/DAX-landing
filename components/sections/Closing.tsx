@@ -18,27 +18,28 @@ export function Closing() {
       id="contact"
       ref={sectionRef}
       className="relative py-44 md:py-60 overflow-hidden"
+      style={{ background: 'var(--dax-navy)' }}
     >
-      {/* Atmospheric glow — more intense for closing emotional weight */}
+      {/* Atmospheric glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <GlowOrb
           size={1000}
-          color="rgba(166, 152, 191, 0.14)"
-          blur={130}
+          color="rgba(57, 190, 249, 0.10)"
+          blur={150}
           className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           animated
         />
         <GlowOrbSlow
           size={700}
-          color="rgba(131, 174, 202, 0.12)"
-          blur={110}
+          color="rgba(26, 159, 216, 0.08)"
+          blur={120}
           className="-top-40 right-0"
           animationDelay={5}
         />
         <GlowOrb
           size={600}
-          color="rgba(191, 175, 216, 0.10)"
-          blur={100}
+          color="rgba(57, 190, 249, 0.07)"
+          blur={110}
           className="bottom-0 -left-20"
           animationDelay={10}
         />
@@ -48,10 +49,10 @@ export function Closing() {
         {/* Cinematic centered headline */}
         <div className="text-center mb-24">
           <FadeIn className="flex items-center justify-center gap-4 mb-12">
-            <div className="w-16 h-px" style={{ background: 'linear-gradient(90deg, transparent, var(--dax-violet))' }} />
+            <div className="w-16 h-px" style={{ background: 'linear-gradient(90deg, transparent, var(--dax-electric))' }} />
             <span
               style={{
-                fontFamily: 'var(--font-inter)',
+                fontFamily: 'var(--font-mono)',
                 fontWeight: 300,
                 fontSize: '0.62rem',
                 letterSpacing: '0.28em',
@@ -61,7 +62,7 @@ export function Closing() {
             >
               Begin
             </span>
-            <div className="w-16 h-px" style={{ background: 'linear-gradient(90deg, var(--dax-violet), transparent)' }} />
+            <div className="w-16 h-px" style={{ background: 'linear-gradient(90deg, var(--dax-electric), transparent)' }} />
           </FadeIn>
 
           <div className="overflow-hidden mb-2">
@@ -70,8 +71,8 @@ export function Closing() {
               animate={isInView ? { y: 0 } : { y: '105%' }}
               transition={{ duration: 1.3, delay: 0.1, ease: EASE_CINEMA }}
               style={{
-                fontFamily: 'var(--font-cormorant)',
-                fontWeight: 300,
+                fontFamily: 'var(--font-outfit)',
+                fontWeight: 700,
                 fontSize: 'clamp(3rem, 8vw, 10rem)',
                 letterSpacing: '-0.035em',
                 lineHeight: 0.92,
@@ -87,13 +88,12 @@ export function Closing() {
               animate={isInView ? { y: 0 } : { y: '105%' }}
               transition={{ duration: 1.3, delay: 0.18, ease: EASE_CINEMA }}
               style={{
-                fontFamily: 'var(--font-cormorant)',
+                fontFamily: 'var(--font-outfit)',
                 fontWeight: 300,
-                fontStyle: 'italic',
                 fontSize: 'clamp(3rem, 8vw, 10rem)',
                 letterSpacing: '-0.035em',
                 lineHeight: 0.92,
-                color: 'var(--dax-primary)',
+                color: 'var(--dax-electric)',
               }}
             >
               is a feeling.
@@ -104,7 +104,7 @@ export function Closing() {
             <p
               className="mt-10 mx-auto"
               style={{
-                fontFamily: 'var(--font-inter)',
+                fontFamily: 'var(--font-outfit)',
                 fontWeight: 300,
                 fontSize: 'clamp(0.82rem, 1vw, 0.95rem)',
                 lineHeight: 1.9,
@@ -120,7 +120,7 @@ export function Closing() {
           </FadeIn>
         </div>
 
-        {/* Contact form — cinematic, minimal */}
+        {/* Contact form */}
         <FadeIn delay={0.5} className="max-w-lg mx-auto">
           <div
             className="atmospheric-surface p-10 mb-10"
@@ -131,7 +131,7 @@ export function Closing() {
                 htmlFor="contact-email"
                 style={{
                   display: 'block',
-                  fontFamily: 'var(--font-inter)',
+                  fontFamily: 'var(--font-mono)',
                   fontWeight: 300,
                   fontSize: '0.6rem',
                   letterSpacing: '0.25em',
@@ -153,11 +153,11 @@ export function Closing() {
                   placeholder="hello@yourstudio.com"
                   className="w-full bg-transparent outline-none pb-3"
                   style={{
-                    fontFamily: 'var(--font-inter)',
+                    fontFamily: 'var(--font-outfit)',
                     fontWeight: 300,
                     fontSize: '0.9rem',
                     color: 'var(--dax-primary)',
-                    borderBottom: `1px solid ${emailFocused ? 'var(--dax-violet)' : 'var(--dax-border)'}`,
+                    borderBottom: `1px solid ${emailFocused ? 'var(--dax-electric)' : 'var(--dax-border)'}`,
                     transition: 'border-color 0.5s',
                     letterSpacing: '0.01em',
                   }}
@@ -168,7 +168,8 @@ export function Closing() {
                   className="absolute bottom-0 left-0 h-px origin-left"
                   style={{
                     width: '100%',
-                    background: 'var(--dax-violet)',
+                    background: 'var(--dax-electric)',
+                    boxShadow: '0 0 8px rgba(57, 190, 249, 0.5)',
                   }}
                 />
               </div>
@@ -179,7 +180,7 @@ export function Closing() {
                 htmlFor="contact-message"
                 style={{
                   display: 'block',
-                  fontFamily: 'var(--font-inter)',
+                  fontFamily: 'var(--font-mono)',
                   fontWeight: 300,
                   fontSize: '0.6rem',
                   letterSpacing: '0.25em',
@@ -196,7 +197,7 @@ export function Closing() {
                 placeholder="Tell us about your vision..."
                 className="w-full bg-transparent outline-none resize-none pb-2"
                 style={{
-                  fontFamily: 'var(--font-inter)',
+                  fontFamily: 'var(--font-outfit)',
                   fontWeight: 300,
                   fontSize: '0.88rem',
                   color: 'var(--dax-primary)',
@@ -213,23 +214,23 @@ export function Closing() {
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="group w-full flex items-center justify-between py-4 px-6 transition-all duration-700"
               style={{
-                background: 'linear-gradient(135deg, rgba(131, 174, 202, 0.15) 0%, rgba(166, 152, 191, 0.12) 100%)',
-                border: '1px solid var(--dax-border)',
+                background: 'rgba(57, 190, 249, 0.08)',
+                border: '1px solid rgba(57, 190, 249, 0.2)',
                 borderRadius: '2px',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background =
-                  'linear-gradient(135deg, rgba(131, 174, 202, 0.25) 0%, rgba(166, 152, 191, 0.20) 100%)'
+                e.currentTarget.style.background = 'rgba(57, 190, 249, 0.14)'
+                e.currentTarget.style.borderColor = 'rgba(57, 190, 249, 0.4)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background =
-                  'linear-gradient(135deg, rgba(131, 174, 202, 0.15) 0%, rgba(166, 152, 191, 0.12) 100%)'
+                e.currentTarget.style.background = 'rgba(57, 190, 249, 0.08)'
+                e.currentTarget.style.borderColor = 'rgba(57, 190, 249, 0.2)'
               }}
             >
               <span
                 style={{
-                  fontFamily: 'var(--font-inter)',
-                  fontWeight: 300,
+                  fontFamily: 'var(--font-outfit)',
+                  fontWeight: 400,
                   fontSize: '0.7rem',
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
@@ -242,7 +243,7 @@ export function Closing() {
                 animate={{ x: 0 }}
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.3 }}
-                style={{ color: 'var(--dax-violet)' }}
+                style={{ color: 'var(--dax-electric)' }}
               >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
@@ -251,23 +252,22 @@ export function Closing() {
             </motion.button>
           </div>
 
-          {/* Alternative links */}
+          {/* Social links */}
           <div className="flex justify-center gap-8">
             {['LinkedIn', 'Behance', 'Instagram'].map((social) => (
               <a
                 key={social}
                 href="#"
-                className="group flex items-center gap-2"
+                className="group flex items-center gap-2 transition-colors duration-400"
                 style={{
-                  fontFamily: 'var(--font-inter)',
+                  fontFamily: 'var(--font-outfit)',
                   fontWeight: 300,
                   fontSize: '0.62rem',
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
                   color: 'var(--dax-tertiary)',
-                  transition: 'color 0.4s',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--dax-secondary)')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--dax-electric)')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dax-tertiary)')}
               >
                 {social}
@@ -284,15 +284,18 @@ export function Footer() {
   return (
     <footer
       className="relative px-8 md:px-14 lg:px-20 xl:px-28 py-12 border-t"
-      style={{ borderColor: 'var(--dax-border)' }}
+      style={{
+        background: 'var(--dax-navy)',
+        borderColor: 'rgba(57, 190, 249, 0.08)',
+      }}
     >
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <span
           style={{
-            fontFamily: 'var(--font-cormorant)',
-            fontWeight: 300,
-            fontSize: '1.1rem',
-            letterSpacing: '0.15em',
+            fontFamily: 'var(--font-outfit)',
+            fontWeight: 700,
+            fontSize: '1rem',
+            letterSpacing: '0.2em',
             color: 'var(--dax-secondary)',
           }}
         >
@@ -301,7 +304,7 @@ export function Footer() {
 
         <span
           style={{
-            fontFamily: 'var(--font-inter)',
+            fontFamily: 'var(--font-mono)',
             fontWeight: 300,
             fontSize: '0.6rem',
             letterSpacing: '0.18em',
@@ -314,7 +317,7 @@ export function Footer() {
 
         <span
           style={{
-            fontFamily: 'var(--font-inter)',
+            fontFamily: 'var(--font-mono)',
             fontWeight: 300,
             fontSize: '0.6rem',
             letterSpacing: '0.12em',

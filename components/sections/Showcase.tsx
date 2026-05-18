@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FadeIn, RevealText } from '@/components/ui/RevealText'
 import { GlowOrb } from '@/components/ui/GlowOrb'
@@ -12,9 +12,9 @@ const projects = [
     category: 'Immersive Interface · 2024',
     description:
       'A real-time data visualization environment that transformed financial complexity into cinematic clarity. The interface breathes with the data.',
-    gradient: 'linear-gradient(135deg, #DDE5EF 0%, #C8D8E8 30%, #D5CAE8 65%, #E2DCF0 100%)',
-    glow: 'rgba(131, 174, 202, 0.35)',
-    accent: 'var(--dax-blue)',
+    gradient: 'linear-gradient(135deg, #0A2540 0%, #0E2F55 30%, #0D3060 65%, #122845 100%)',
+    glow: 'rgba(57, 190, 249, 0.25)',
+    accent: 'var(--dax-electric)',
     size: 'large',
   },
   {
@@ -23,9 +23,9 @@ const projects = [
     category: 'Brand Engineering · 2024',
     description:
       'A global luxury technology brand built from atmospheric principles. Identity that exists before the product is seen.',
-    gradient: 'linear-gradient(135deg, #E2DBEF 0%, #D4CAE6 35%, #CBB8DC 60%, #D8CCEC 100%)',
-    glow: 'rgba(166, 152, 191, 0.35)',
-    accent: 'var(--dax-violet)',
+    gradient: 'linear-gradient(135deg, #071D35 0%, #0C2545 35%, #102D50 60%, #0A2040 100%)',
+    glow: 'rgba(26, 159, 216, 0.22)',
+    accent: 'var(--dax-electric-dark)',
     size: 'medium',
   },
   {
@@ -34,9 +34,9 @@ const projects = [
     category: 'Interactive Storytelling · 2025',
     description:
       'An editorial platform that redefines how knowledge is experienced. Navigation becomes discovery. Reading becomes immersion.',
-    gradient: 'linear-gradient(135deg, #E8E2F2 0%, #DDDAF5 30%, #CAD5EC 65%, #D8E0EE 100%)',
-    glow: 'rgba(191, 175, 216, 0.30)',
-    accent: 'var(--dax-lavender)',
+    gradient: 'linear-gradient(135deg, #091C33 0%, #0D2848 30%, #0E2F58 65%, #0C2444 100%)',
+    glow: 'rgba(57, 190, 249, 0.18)',
+    accent: 'var(--dax-electric)',
     size: 'medium',
   },
 ]
@@ -65,7 +65,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
             }}
           />
 
-          {/* Atmospheric glow layer */}
+          {/* Electric glow layer */}
           <div
             className="absolute inset-0 transition-opacity duration-700"
             style={{
@@ -74,25 +74,25 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
             }}
           />
 
-          {/* Grid lines — architectural feel */}
+          {/* Grid lines — architectural */}
           <div
             className="absolute inset-0 opacity-[0.06]"
             style={{
               backgroundImage: `
-                linear-gradient(0deg, rgba(131,174,202,0.8) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(131,174,202,0.8) 1px, transparent 1px)
+                linear-gradient(0deg, rgba(57,190,249,0.8) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(57,190,249,0.8) 1px, transparent 1px)
               `,
               backgroundSize: '60px 60px',
             }}
           />
 
-          {/* Surface glass panel — simulates UI surface */}
+          {/* Glass panel — simulates UI surface */}
           <div
             className="absolute bottom-6 left-6 right-6 transition-all duration-700"
             style={{
-              background: 'rgba(243, 240, 232, 0.45)',
+              background: 'rgba(6, 21, 40, 0.6)',
               backdropFilter: 'blur(16px)',
-              border: '1px solid rgba(150, 145, 138, 0.15)',
+              border: '1px solid rgba(57, 190, 249, 0.15)',
               padding: '16px 20px',
               opacity: hovered ? 1 : 0.6,
               transform: hovered ? 'translateY(0)' : 'translateY(4px)',
@@ -106,7 +106,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                 />
                 <span
                   style={{
-                    fontFamily: 'var(--font-inter)',
+                    fontFamily: 'var(--font-mono)',
                     fontWeight: 300,
                     fontSize: '0.58rem',
                     letterSpacing: '0.2em',
@@ -127,7 +127,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
               >
                 <span
                   style={{
-                    fontFamily: 'var(--font-inter)',
+                    fontFamily: 'var(--font-outfit)',
                     fontWeight: 300,
                     fontSize: '0.6rem',
                     letterSpacing: '0.14em',
@@ -143,15 +143,15 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
             </div>
           </div>
 
-          {/* Corner accent */}
+          {/* Corner number */}
           <div className="absolute top-5 right-5">
             <span
               style={{
-                fontFamily: 'var(--font-cormorant)',
+                fontFamily: 'var(--font-mono)',
                 fontWeight: 300,
                 fontSize: '0.7rem',
                 letterSpacing: '0.1em',
-                color: 'rgba(150, 145, 138, 0.5)',
+                color: 'rgba(57, 190, 249, 0.3)',
               }}
             >
               {project.number}
@@ -163,12 +163,12 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
         <div className="flex items-baseline gap-4">
           <h3
             style={{
-              fontFamily: 'var(--font-cormorant)',
-              fontWeight: 300,
-              fontSize: 'clamp(1.6rem, 2.5vw, 2.8rem)',
+              fontFamily: 'var(--font-outfit)',
+              fontWeight: 700,
+              fontSize: 'clamp(1.4rem, 2.2vw, 2.5rem)',
               letterSpacing: '-0.02em',
               lineHeight: 1,
-              color: 'var(--dax-primary)',
+              color: hovered ? 'var(--dax-electric)' : 'var(--dax-primary)',
               transition: 'color 0.5s',
             }}
           >
@@ -177,11 +177,11 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
           <p
             className="hidden md:block"
             style={{
-              fontFamily: 'var(--font-inter)',
+              fontFamily: 'var(--font-outfit)',
               fontWeight: 300,
               fontSize: '0.78rem',
               lineHeight: 1.7,
-              color: 'var(--dax-tertiary)',
+              color: 'var(--dax-secondary)',
               maxWidth: '300px',
             }}
           >
@@ -195,21 +195,24 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
 
 export function Showcase() {
   return (
-    <section id="showcase" className="relative py-36 md:py-52 overflow-hidden">
-      {/* Glow */}
+    <section
+      id="showcase"
+      className="relative py-36 md:py-52 overflow-hidden"
+      style={{ background: 'var(--dax-navy-raised)' }}
+    >
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <GlowOrb
           size={700}
-          color="rgba(131, 174, 202, 0.11)"
-          blur={110}
+          color="rgba(57, 190, 249, 0.08)"
+          blur={120}
           className="top-20 -right-20"
           animated
           animationDelay={2}
         />
         <GlowOrb
           size={500}
-          color="rgba(191, 175, 216, 0.10)"
-          blur={90}
+          color="rgba(26, 159, 216, 0.07)"
+          blur={100}
           className="bottom-20 -left-10"
           animationDelay={8}
         />
@@ -220,10 +223,10 @@ export function Showcase() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
           <div>
             <FadeIn className="flex items-center gap-4 mb-8">
-              <div className="w-6 h-px" style={{ background: 'var(--dax-blue)' }} />
+              <div className="w-6 h-px" style={{ background: 'var(--dax-electric)' }} />
               <span
                 style={{
-                  fontFamily: 'var(--font-inter)',
+                  fontFamily: 'var(--font-mono)',
                   fontWeight: 300,
                   fontSize: '0.62rem',
                   letterSpacing: '0.28em',
@@ -237,8 +240,8 @@ export function Showcase() {
             <RevealText>
               <h2
                 style={{
-                  fontFamily: 'var(--font-cormorant)',
-                  fontWeight: 300,
+                  fontFamily: 'var(--font-outfit)',
+                  fontWeight: 700,
                   fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)',
                   letterSpacing: '-0.025em',
                   lineHeight: 1.05,
@@ -251,13 +254,12 @@ export function Showcase() {
             <RevealText delay={0.1}>
               <h2
                 style={{
-                  fontFamily: 'var(--font-cormorant)',
+                  fontFamily: 'var(--font-outfit)',
                   fontWeight: 300,
-                  fontStyle: 'italic',
                   fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)',
                   letterSpacing: '-0.025em',
                   lineHeight: 1.05,
-                  color: 'var(--dax-primary)',
+                  color: 'var(--dax-electric)',
                 }}
               >
                 have built.
@@ -268,14 +270,17 @@ export function Showcase() {
           <FadeIn delay={0.2} className="pb-2">
             <a
               href="#contact"
-              className="group flex items-center gap-3 text-dax-secondary hover:text-dax-primary transition-colors duration-500"
+              className="group flex items-center gap-3 transition-colors duration-500"
               style={{
-                fontFamily: 'var(--font-inter)',
+                fontFamily: 'var(--font-outfit)',
                 fontWeight: 300,
                 fontSize: '0.68rem',
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
+                color: 'var(--dax-secondary)',
               }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--dax-electric)')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--dax-secondary)')}
             >
               All projects
               <span
@@ -288,12 +293,9 @@ export function Showcase() {
 
         {/* Projects grid — asymmetric */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
-          {/* Large project — left, spans 7 */}
           <div className="lg:col-span-7">
             <ProjectCard project={projects[0]} index={0} />
           </div>
-
-          {/* Two smaller projects — right, stacked */}
           <div className="lg:col-span-5 flex flex-col gap-10">
             <ProjectCard project={projects[1]} index={1} />
             <ProjectCard project={projects[2]} index={2} />

@@ -5,30 +5,39 @@
 /* ─── DAX Design System ─────────────────────────────────────── */
 
 :root {
-  /* Base surfaces */
-  --dax-bg:         #F3F0E8;
-  --dax-pearl:      #EDE9DF;
-  --dax-fog:        #E5E1D6;
-  --dax-silver:     #CEC9BE;
+  /* ── Core palette ── */
+  --dax-navy:           #061528;
+  --dax-navy-raised:    #0E2138;
+  --dax-slate:          #2E3D50;
+  --dax-electric:       #39BEF9;
+  --dax-electric-dark:  #1A9FD8;
 
-  /* Text */
-  --dax-primary:    #1C1A16;
-  --dax-secondary:  #6A6760;
-  --dax-tertiary:   #9C9891;
+  /* ── Light surfaces ── */
+  --dax-surface:        #F2F4F8;
+  --dax-surface-low:    #E8ECF2;
+  --dax-off-white:      #F7F9FC;
+  --dax-border-light:   #D8DEE6;
 
-  /* Accent tones (restrained, cinematic) */
-  --dax-blue:       #83AECA;
-  --dax-violet:     #A698BF;
-  --dax-lavender:   #BFAFD8;
+  /* ── Dark section tokens (default) ── */
+  --dax-bg:             #061528;
+  --dax-primary:        #F7F9FC;
+  --dax-secondary:      #8FA3B8;
+  --dax-tertiary:       #4E6278;
+  --dax-blue:           #39BEF9;
+  --dax-violet:         #1A9FD8;
+  --dax-lavender:       rgba(57, 190, 249, 0.55);
+  --dax-border:         rgba(57, 190, 249, 0.12);
+  --dax-border-2:       rgba(57, 190, 249, 0.06);
 
-  /* Glow values */
-  --glow-blue:      rgba(131, 174, 202, 0.22);
-  --glow-violet:    rgba(166, 152, 191, 0.18);
-  --glow-lavender:  rgba(191, 175, 216, 0.14);
+  /* ── Light section overrides (use on light-bg sections) ── */
+  --dax-light-primary:  #061528;
+  --dax-light-secondary:#2E3D50;
+  --dax-light-tertiary: #6B7E92;
+  --dax-light-border:   #D8DEE6;
 
-  /* Borders */
-  --dax-border:     rgba(150, 145, 138, 0.15);
-  --dax-border-2:   rgba(150, 145, 138, 0.08);
+  /* Glow */
+  --glow-electric:      rgba(57, 190, 249, 0.22);
+  --glow-blue:          rgba(57, 190, 249, 0.15);
 }
 
 /* ─── Reset ─────────────────────────────────────────────────── */
@@ -43,28 +52,23 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  scroll-behavior: auto; /* Lenis handles smooth scroll */
+  scroll-behavior: auto;
 }
 
 /* ─── Atmospheric Body ───────────────────────────────────────── */
 
 body {
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-outfit), system-ui, sans-serif;
   color: var(--dax-primary);
   overflow-x: hidden;
   position: relative;
 
-  /* Layered atmospheric background — never flat white */
-  background-color: var(--dax-bg);
+  background-color: var(--dax-navy);
   background-image:
-    /* Top-right icy blue bloom */
-    radial-gradient(ellipse 65% 50% at 88% 2%, rgba(131, 174, 202, 0.13) 0%, transparent 60%),
-    /* Left-center violet haze */
-    radial-gradient(ellipse 50% 45% at 5% 55%, rgba(166, 152, 191, 0.10) 0%, transparent 58%),
-    /* Bottom lavender diffusion */
-    radial-gradient(ellipse 75% 40% at 50% 100%, rgba(191, 175, 216, 0.09) 0%, transparent 60%),
-    /* Central subtle pearl shimmer */
-    radial-gradient(ellipse 45% 35% at 55% 30%, rgba(243, 240, 232, 0.6) 0%, transparent 65%);
+    radial-gradient(ellipse 70% 55% at 90% 5%,  rgba(57, 190, 249, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 45% at 5% 60%,  rgba(26, 159, 216, 0.07) 0%, transparent 58%),
+    radial-gradient(ellipse 65% 40% at 50% 100%, rgba(57, 190, 249, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 55% 35%,  rgba(14, 33, 56, 0.8) 0%, transparent 65%);
 }
 
 /* ─── Film Grain Overlay ─────────────────────────────────────── */
@@ -75,7 +79,7 @@ body::before {
   inset: -30%;
   width: 160%;
   height: 160%;
-  opacity: 0.028;
+  opacity: 0.022;
   pointer-events: none;
   z-index: 9999;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
@@ -100,30 +104,30 @@ body::before {
 /* ─── Typography Foundation ──────────────────────────────────── */
 
 h1, h2, h3, h4 {
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-weight: 300;
-  letter-spacing: -0.025em;
-  line-height: 1.0;
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
   color: var(--dax-primary);
 }
 
 p, span, button, a {
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-outfit), system-ui, sans-serif;
 }
 
 /* ─── Selection Styling ──────────────────────────────────────── */
 
 ::selection {
-  background: rgba(131, 174, 202, 0.25);
+  background: rgba(57, 190, 249, 0.22);
   color: var(--dax-primary);
 }
 
 /* ─── Placeholder styling ────────────────────────────────────── */
 
 ::placeholder {
-  color: var(--dax-silver);
+  color: var(--dax-tertiary);
   font-weight: 300;
-  font-family: var(--font-inter);
+  font-family: var(--font-outfit);
 }
 
 /* ─── Scrollbar ──────────────────────────────────────────────── */
@@ -132,24 +136,31 @@ p, span, button, a {
   width: 3px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--dax-fog);
+  background: var(--dax-navy-raised);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--dax-silver);
+  background: var(--dax-slate);
   border-radius: 2px;
 }
 
 /* ─── Utilities ──────────────────────────────────────────────── */
 
 .atmospheric-surface {
-  background: rgba(237, 233, 223, 0.65);
+  background: rgba(14, 33, 56, 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--dax-border);
 }
 
-.text-gradient-violet {
-  background: linear-gradient(135deg, var(--dax-violet) 0%, var(--dax-lavender) 100%);
+.atmospheric-surface-light {
+  background: rgba(242, 244, 248, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--dax-border-light);
+}
+
+.text-gradient-electric {
+  background: linear-gradient(135deg, var(--dax-electric) 0%, var(--dax-electric-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -159,4 +170,10 @@ p, span, button, a {
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--dax-border), transparent);
+}
+
+.section-divider-light {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dax-border-light), transparent);
 }

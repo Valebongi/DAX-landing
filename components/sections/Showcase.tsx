@@ -200,6 +200,16 @@ export function Showcase() {
       className="relative py-36 md:py-52 overflow-hidden"
       style={{ background: 'var(--dax-navy-raised)' }}
     >
+      {/* ── Top: continuation from Craftsmanship dissolve ── */}
+      <div
+        className="absolute top-0 left-0 right-0 pointer-events-none"
+        style={{
+          height: 'clamp(140px, 20vh, 280px)',
+          background: 'linear-gradient(to bottom, #0E2138 0%, transparent 100%)',
+          zIndex: 2,
+        }}
+      />
+
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <GlowOrb
           size={700}

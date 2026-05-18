@@ -30,6 +30,16 @@ export function Craftsmanship() {
       className="relative py-36 md:py-52 overflow-hidden"
       style={{ background: 'var(--dax-surface)' }}
     >
+      {/* ── Top: dissolve from navy Immersion ── */}
+      <div
+        className="absolute top-0 left-0 right-0 pointer-events-none"
+        style={{
+          height: 'clamp(200px, 28vh, 380px)',
+          background: 'linear-gradient(to bottom, #061528 0%, transparent 100%)',
+          zIndex: 2,
+        }}
+      />
+
       {/* Subtle bottom-left glow */}
       <div
         className="absolute pointer-events-none"
@@ -191,6 +201,16 @@ export function Craftsmanship() {
           </blockquote>
         </FadeIn>
       </div>
+
+      {/* ── Bottom: dissolve into Showcase (navy-raised) ── */}
+      <div
+        className="absolute bottom-0 left-0 right-0 pointer-events-none"
+        style={{
+          height: 'clamp(260px, 35vh, 460px)',
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(14,33,56,0.12) 55%, #0E2138 100%)',
+          zIndex: 2,
+        }}
+      />
     </section>
   )
 }

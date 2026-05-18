@@ -269,6 +269,16 @@ export function Hero() {
           Scroll
         </span>
       </motion.div>
+
+      {/* ── Cinematic dissolve into Philosophy (light section) ── */}
+      <div
+        className="absolute bottom-0 left-0 right-0 pointer-events-none"
+        style={{
+          height: 'clamp(300px, 40vh, 520px)',
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(6,21,40,0.2) 35%, #F2F4F8 100%)',
+          zIndex: 8,
+        }}
+      />
     </section>
   )
 }
